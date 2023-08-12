@@ -1,0 +1,15 @@
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container h1 {
+  color: #fdfdfd;
+}
+.container p {
+  color: grey;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=Menu.module.css.map */
