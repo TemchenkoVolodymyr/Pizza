@@ -12,7 +12,7 @@ const Layout = () => {
         <Header/>
       </header>
 
-      <main>
+      <main style={{height:"100%"}}>
         <Outlet/>
       </main>
 
