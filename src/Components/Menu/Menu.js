@@ -20,24 +20,24 @@ const Menu = () => {
   return (
     <>
       <div className={style.container} style={{backgroundImage: `url(${gb})`}}>
-        <div>
+        <div className={style.headerMenu}>
           <h1>
             HOT PIZZA MEALS
           </h1>
           <p>Far far away,behind the word mountains,far fram the countries Vakalia and Cansonantia,there live the blind
             texts</p>
         </div>
-        <div>
-          {dataOfPizzas && dataOfPizzas.map(item => <div>
+        <div className={style.itemsMenu}>
+          {dataOfPizzas && dataOfPizzas.map(item => <div className={style.wrapperItems}>
             <div>
               <img src={pizzaImage} alt="image"/>
             </div>
 
-            <div>
-              <p>{item.name}</p>
-              <p>{item.description}</p>
-              <div>
-                <p>{item.price}</p>
+            <div className={style.descriptionItem}>
+              <p className={style.name}>{item.name}</p>
+              <p className={style.description}>{item.description}</p>
+              <div className={style.wrapperPrice}>
+                <p className={style.price}><span>$ {item.price}</span></p>
                 <button>Order</button>
               </div>
             </div>
