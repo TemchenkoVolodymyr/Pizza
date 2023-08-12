@@ -1,0 +1,23 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  img{
+    max-width: 200px;
+  }
+  .wrapperList{
+    ul{
+      display: flex;
+      li{
+        list-style: none;
+        padding: 5px;
+        margin: 0 25px;
+        &:hover{
+          cursor: pointer;
+        };
+      }
+    }
+
+  }
+}
