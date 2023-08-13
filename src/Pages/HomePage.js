@@ -6,6 +6,7 @@ import {useDispatch} from "react-redux";
 import {homePageAC} from "../Redux/HomePage/homePageAC";
 import OtherProduct from "../Components/OtherProduct/OtherProduct";
 import AboutUs from "../Components/AboutUs/AboutUs";
+import HistoryOfRestaurant from "../Components/AboutUs/HistoryOfRestaurant";
 
 
 const HomePage = () => {
@@ -22,6 +23,7 @@ const HomePage = () => {
       <HomeSlider></HomeSlider>
       <Menu></Menu>
       <AboutUs></AboutUs>
+      <HistoryOfRestaurant></HistoryOfRestaurant>
 
     </>
   )
