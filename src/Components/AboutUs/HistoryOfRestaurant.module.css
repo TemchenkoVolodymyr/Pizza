@@ -1,5 +1,8 @@
+.wrapperImage {
+  margin-left: 10px;
+}
 .wrapperImage img {
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .container {
