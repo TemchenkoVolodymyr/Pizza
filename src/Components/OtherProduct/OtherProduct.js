@@ -44,11 +44,14 @@ const OtherProduct = () => {
           </div>
 
           <div className={style.containerProducts}>
-            {currentProduct && currentProduct.map(item => <div>
+            {currentProduct && currentProduct.map(item => <div className={style.wrapper}>
               <img src={test} alt="image"/>
-              <p>{item.name}</p>
-              <p>{item.shortDesciption}</p>
-              <p>{item.price}</p>
+              <div>
+                <h1>{item.name}</h1>
+                <p className={style.description}>{item.shortDesciption}</p>
+              </div>
+
+              <p className={style.price}>$ {item.price}</p>
               <button>Add to cart</button>
             </div>)}
           </div>
