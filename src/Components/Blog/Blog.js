@@ -1,16 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import style from './Blog.module.scss'
 import italianFried from '../../assets/Italian Fried Pasta.jpg'
 import TheArabic from '../../assets/image_1 1.png'
 import BooksPizza from '../../assets/image_3 1.png'
 import bg from '../../assets/bg_4.jpg'
 import {TfiCommentAlt} from "react-icons/tfi";
+import axios from "axios";
+import CustomModal from "../CustomModal/CustomModal";
 
 const Blog = () => {
 
-  const styleImage = {
-    backgroundImage: `url(${italianFried})`
+  const [italianMeetData,setItalianMeetData] = useState(null)
+  const [modal,setModal] = useState(false)
+  const handleOpen = () => setModal(true);
+  const handleClose = () => setModal(false);
+
+
+  const getItalianMeetData = () => {
+    setModal(true)
+    return axios.get(`http://localhost:3000/api/v1/italianMeet`).then(res => setItalianMeetData(res.data.data.result))
   }
+
+  const test = () => {
+    axios.post(`http://localhost:3000/api/v1/italianMeet`,{
+
+      author :"Admin",
+      star : 5,
+      comment :"Alloha 3yvachki",
+      date :"2022-10-5"
+    })
+  }
+
   return (
 
 
@@ -28,7 +48,7 @@ const Blog = () => {
             <img src={italianFried} alt='image'/>
             <div className={style.wrapperDate}>
               <p>Sept 10,2020</p>
-              <p className={style.comment}>3 <TfiCommentAlt></TfiCommentAlt></p>
+              <p onClick={getItalianMeetData} className={style.comment}>3 <TfiCommentAlt></TfiCommentAlt></p>
             </div>
             <h3>Italian Fried Meet</h3>
             <p className={style.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequatur cum debitis distinctio
@@ -59,6 +79,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
+      {modal ? <CustomModal data={italianMeetData} handleClose={handleClose} modal={modal}></CustomModal> : null}
     </>
   )
 }
