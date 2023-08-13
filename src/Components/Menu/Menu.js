@@ -6,6 +6,7 @@ import {useSelector} from "react-redux";
 import pizzaImage from '../../assets/pizza-1.jpg'
 import MenuItems from "../../Pagination/MenuItems";
 import Pagination from "../../Pagination/Pagination";
+import romb from '../../assets/romb.png'
 const Menu = () => {
 
   const dataOfPizzas = useSelector((state) => state.dataOfPizzas)
@@ -51,6 +52,13 @@ const Menu = () => {
         </div>
         <MenuItems menuData={currentMenu} loading={loading}></MenuItems>
         <Pagination dataPerPage={dataPerPage} totalItems={dataOfPizzas.length} paginate={paginate}></Pagination>
+
+        <div className={style.containerPrice}>
+          <h1>OUR MENU PRICING</h1>
+          <img src={romb} alt="image"/>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aut dolores ducimus earum facere illo itaque libero maxime, mollitia nobis numquam officiis porro quas repellendus sed vel veritatis voluptatem.</p>
+
+        </div>
       </div>
     </>
   )
