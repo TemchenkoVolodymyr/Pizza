@@ -1,0 +1,39 @@
+.container{
+  //max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin:100px auto;
+  justify-content: center;
+  max-width: 1200px;
+  .description{
+    //width: 500px;
+  }
+
+}
+.wrapperText{
+ width: 400px;
+ // display: flex;
+
+}
+.wrapperImage{
+  img{
+    max-width: 100px;
+  }
+}
+.main{
+  display: flex;
+  padding: 15px;
+}
+.wrapperPrice{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #ef0000;
+p{
+  color: #de6908;
+  padding: 10px;
+  font-size: 17px;
+}
+}

@@ -7,6 +7,7 @@ import pizzaImage from '../../assets/pizza-1.jpg'
 import MenuItems from "../../Pagination/MenuItems";
 import Pagination from "../../Pagination/Pagination";
 import romb from '../../assets/romb.png'
+import Price from "./Price/Price";
 const Menu = () => {
 
   const dataOfPizzas = useSelector((state) => state.dataOfPizzas)
@@ -59,7 +60,9 @@ const Menu = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aut dolores ducimus earum facere illo itaque libero maxime, mollitia nobis numquam officiis porro quas repellendus sed vel veritatis voluptatem.</p>
 
         </div>
+        <Price data={dataOfPizzas}></Price>
       </div>
+
     </>
   )
 }
