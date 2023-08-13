@@ -1,0 +1,23 @@
+.items {
+  display: flex;
+}
+.items li {
+  padding: 10px;
+  font-size: 30px;
+  list-style: none;
+  color: #fdfdfd;
+  background-color: black;
+  margin: 5px;
+}
+.items li:hover {
+  background-color: #fdfdfd;
+  color: #000000;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #fdfdfd !important;
+  color: #000000 !important;
+}
+
+/*# sourceMappingURL=Pagination.module.css.map */
