@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+}
+.container .info {
+  width: 70%;
+  background-color: black;
+  display: flex;
+  color: white;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.container .info div {
+  margin: 0 50px;
+}
+.container .info div a {
+  color: #fdfdfd;
+  text-decoration: none;
+  font-size: 16px;
+}
+.container .info div p {
+  margin-top: 10px;
+  color: #cecece;
+}
+.container .info div h3 {
+  font-size: 16px;
+}
+.container .social {
+  background-color: orange;
+  width: 30%;
+  padding: 30px;
+}
+.container .social svg {
+  color: #ffffff;
+  font-size: 30px;
+  margin: 0 20px;
+}
+
+/*# sourceMappingURL=AboutUs.module.css.map */

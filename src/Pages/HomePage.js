@@ -5,6 +5,7 @@ import axios from "axios";
 import {useDispatch} from "react-redux";
 import {homePageAC} from "../Redux/HomePage/homePageAC";
 import OtherProduct from "../Components/OtherProduct/OtherProduct";
+import AboutUs from "../Components/AboutUs/AboutUs";
 
 
 const HomePage = () => {
@@ -20,6 +21,7 @@ const HomePage = () => {
     <>
       <HomeSlider></HomeSlider>
       <Menu></Menu>
+      <AboutUs></AboutUs>
 
     </>
   )
