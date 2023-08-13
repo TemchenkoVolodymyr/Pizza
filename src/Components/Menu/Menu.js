@@ -8,6 +8,7 @@ import MenuItems from "../../Pagination/MenuItems";
 import Pagination from "../../Pagination/Pagination";
 import romb from '../../assets/romb.png'
 import Price from "./Price/Price";
+import OtherProduct from "../OtherProduct/OtherProduct";
 const Menu = () => {
 
   const dataOfPizzas = useSelector((state) => state.dataOfPizzas)
@@ -61,6 +62,7 @@ const Menu = () => {
 
         </div>
         <Price data={dataOfPizzas}></Price>
+        <OtherProduct></OtherProduct>
       </div>
 
     </>

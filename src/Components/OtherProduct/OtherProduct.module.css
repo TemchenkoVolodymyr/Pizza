@@ -1,0 +1,33 @@
+.container {
+  padding: 15px;
+  display: flex;
+}
+.container .lists ul {
+  display: flex;
+}
+.container .lists ul li {
+  list-style: none;
+  color: #ef0000;
+  border: 1px solid #ef0000;
+  padding: 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+.container .lists ul li:hover {
+  background-color: #de6908;
+  border: none;
+  color: #000000;
+}
+
+.wrapperImage img {
+  max-width: 800px;
+}
+
+.containerProducts {
+  display: flex;
+}
+.containerProducts img {
+  max-width: 200px;
+}
+
+/*# sourceMappingURL=OtherProduct.module.css.map */
