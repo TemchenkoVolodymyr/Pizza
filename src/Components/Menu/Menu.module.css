@@ -47,6 +47,9 @@
   margin-bottom: 100px;
   text-align: center;
 }
+.headerMenu h1 {
+  margin-bottom: 20px;
+}
 
 .wrapperPrice {
   display: flex;

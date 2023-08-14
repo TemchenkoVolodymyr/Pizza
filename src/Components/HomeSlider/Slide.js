@@ -3,6 +3,7 @@ import './Slide.module.scss'
 import style from './Slide.module.scss'
 import {FaRegDotCircle} from "react-icons/fa";
 import {SiThreedotjs} from "react-icons/si";
+import Header from "../Header/Header";
 
 const Slide = (props) => {
 
@@ -21,6 +22,7 @@ const Slide = (props) => {
     <>
       <div className={style.container}>
         <div className={style.carousel} style={sliderStyles}>
+          <Header></Header>
           <div className={style.btns}>
             <button className={style.order}>Order Now</button>
             <button className={style.view}>View Menu</button>

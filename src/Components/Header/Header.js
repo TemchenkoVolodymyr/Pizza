@@ -1,11 +1,12 @@
 import React from "react";
 import style from './Header.module.scss'
-import logo from '../../assets/logoPizza.png'
+import logo from '../../assets/logo.png'
 import {Link} from "react-scroll";
 
 const Header = () => {
   return (
     <>
+      <div className={style.header}>
       <div className={style.container}>
         <div>
           <img src={logo} alt="logo"/>
@@ -36,6 +37,7 @@ const Header = () => {
 
           </ul>
         </div>
+      </div>
       </div>
     </>
   )

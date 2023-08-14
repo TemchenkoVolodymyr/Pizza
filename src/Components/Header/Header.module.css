@@ -3,9 +3,15 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  color: #868686;
 }
 .container img {
   max-width: 200px;
+}
+.container .wrapperList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container .wrapperList ul {
   display: flex;
@@ -17,6 +23,11 @@
 }
 .container .wrapperList ul li:hover {
   cursor: pointer;
+  color: #ef0000;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.32);
 }
 
 /*# sourceMappingURL=Header.module.css.map */

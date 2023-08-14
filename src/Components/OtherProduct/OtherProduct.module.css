@@ -1,5 +1,7 @@
 .container {
-  padding: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 100px;
   display: flex;
 }
 .container .lists ul {

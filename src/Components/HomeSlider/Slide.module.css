@@ -8,12 +8,14 @@
   height: 100%;
   background-size: cover;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: space-between;
 }
 .carousel .btns {
-  margin-top: 600px;
+  margin-top: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .carousel .btns button {
   padding: 20px;
@@ -47,6 +49,8 @@
 
 .dots {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .dots div {
   padding: 15px;

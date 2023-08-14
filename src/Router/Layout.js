@@ -9,7 +9,7 @@ const Layout = () => {
   return (
     <>
       <header>
-        <Header/>
+        {/*<Header/>*/}
       </header>
 
       <main style={{height:"100%"}}>
