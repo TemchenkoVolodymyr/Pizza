@@ -1,0 +1,70 @@
+.container {
+  padding: 15px;
+  display: flex;
+}
+.container .lists ul {
+  display: flex;
+}
+.container .lists ul li {
+  list-style: none;
+  color: #ef0000;
+  border: 1px solid #ef0000;
+  padding: 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.9s;
+}
+.container .lists ul li:hover {
+  background-color: #de6908;
+  border: none;
+  color: #000000;
+}
+
+.wrapperImage img {
+  max-width: 800px;
+}
+
+.containerProducts {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+}
+.containerProducts img {
+  max-width: 200px;
+}
+.containerProducts .wrapper {
+  text-align: center;
+  margin-top: 50px;
+  width: 300px;
+}
+.containerProducts .wrapper h1 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.containerProducts .wrapper div {
+  max-width: 300px;
+}
+.containerProducts .wrapper button {
+  background-color: transparent;
+  border: 1px solid #ef0000;
+  color: #ef0000;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.containerProducts .wrapper button:hover {
+  padding: 15px 30px;
+  border: 1px solid white;
+  color: #fdfdfd;
+}
+.containerProducts .price {
+  color: #ef0000;
+  padding: 15px;
+  font-size: 19px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=OtherProduct.module.css.map */

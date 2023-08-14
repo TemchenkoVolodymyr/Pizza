@@ -1,0 +1,30 @@
+.container div {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border-bottom: 1px solid #de6908;
+  margin-bottom: 30px;
+}
+.container div input {
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  color: #fdfdfd;
+}
+.container div label {
+  color: #de6908;
+}
+
+form button {
+  padding: 10px 40px;
+  background-color: #de6908;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+form button:hover {
+  padding: 10px 45px;
+  color: #fdfdfd;
+}
+
+/*# sourceMappingURL=Form.module.css.map */

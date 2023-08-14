@@ -1,0 +1,39 @@
+.container{
+
+}
+.containerModal{
+  border: 1px solid black;
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 100%;
+}
+.wrapper{
+  margin-bottom: 10px;
+  background-color: #eeeeee;
+  padding: 10px;
+  div{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .comment{
+    font-size: 18px;
+  }
+}
+.test{
+  display: flex;
+}
+.wrapperHeader{
+  margin: 10px;
+  img{
+    max-width: 300px;
+    object-fit: cover;
+  }
+  p{
+    font-size: 30px;
+    font-weight: bolder;
+    color:#ef0000;
+  }
+}

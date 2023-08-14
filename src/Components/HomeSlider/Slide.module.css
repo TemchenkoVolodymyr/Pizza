@@ -1,0 +1,67 @@
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carousel .btns {
+  margin-top: 600px;
+}
+.carousel .btns button {
+  padding: 20px;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.order {
+  background-color: #e50202;
+  color: #000000;
+  border: none;
+}
+.order:hover {
+  color: #fdfdfd;
+  cursor: pointer;
+  padding: 30px;
+}
+
+.view {
+  background-color: transparent;
+  border: 1px solid aliceblue;
+  color: aliceblue;
+  cursor: pointer;
+}
+.view:hover {
+  color: black;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+.dots {
+  display: flex;
+}
+.dots div {
+  padding: 15px;
+}
+.dots div:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: #ef0000;
+  padding: 10px;
+}
+
+.dot:hover {
+  color: #ef0000;
+}
+
+/*# sourceMappingURL=Slide.module.css.map */

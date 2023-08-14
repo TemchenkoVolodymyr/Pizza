@@ -1,0 +1,39 @@
+.container{
+  display: flex;
+  .info{
+    width: 70%;
+    background-color: black;
+    display: flex;
+    //justify-content: space-between;
+    color:white;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+
+    div{
+      margin: 0 50px;
+      a{
+        color:#fdfdfd;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      p{
+        margin-top: 10px;
+        color:#cecece;
+      }
+      h3{
+        font-size: 16px;
+      }
+    }
+  }
+  .social{
+    background-color: orange;
+    width: 30%;
+    padding: 30px;
+    svg{
+      color: #ffffff;
+      font-size: 30px;
+      margin: 0 20px;
+    }
+  }
+}

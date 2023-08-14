@@ -1,6 +1,7 @@
 import React from 'react';
 import {Outlet} from "react-router-dom";
 import style from './Layout.module.scss'
+import Header from "../Components/Header/Header";
 
 const Layout = () => {
 
@@ -8,12 +9,12 @@ const Layout = () => {
   return (
     <>
       <header>
-
+        <Header/>
       </header>
 
-        <main >
-          <Outlet/>
-        </main>
+      <main style={{height:"100%"}}>
+        <Outlet/>
+      </main>
 
     </>
   );

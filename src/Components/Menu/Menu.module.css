@@ -1,0 +1,94 @@
+.container {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+.container h1 {
+  color: #fdfdfd;
+}
+.container p {
+  color: grey;
+  font-size: 15px;
+}
+
+.itemsMenu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+.itemsMenu img {
+  max-width: 290px;
+}
+.itemsMenu .descriptionItem {
+  max-width: 300px;
+  padding: 10px;
+}
+.itemsMenu .descriptionItem .name {
+  color: #cecece;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.itemsMenu .descriptionItem .description {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.itemsMenu .descriptionItem .price {
+  font-size: 20px;
+}
+.itemsMenu .descriptionItem .price span {
+  color: #ef0000;
+}
+
+.wrapperItems {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.headerMenu {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.wrapperPrice {
+  display: flex;
+  align-items: center;
+}
+.wrapperPrice p {
+  padding: 0 15px;
+}
+.wrapperPrice button {
+  background-color: transparent;
+  border: 1px solid #ef0000;
+  color: #ef0000;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.wrapperPrice button:hover {
+  padding: 15px 30px;
+  border: 1px solid white;
+  color: #fdfdfd;
+}
+
+.pages {
+  text-align: right;
+  margin: 30px;
+  padding: 30px;
+}
+
+.containerPrice {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+}
+.containerPrice img {
+  margin: 40px 0;
+}
+.containerPrice p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=Menu.module.css.map */
