@@ -9,6 +9,7 @@ import AboutUs from "../Components/AboutUs/AboutUs";
 import HistoryOfRestaurant from "../Components/AboutUs/HistoryOfRestaurant";
 import BlogSection from "../Components/BlogSection/BlogSection";
 import RestaurantStuff from "../Components/AboutUs/RestaurantStuff/RestaurantStuff";
+import ContactUs from "../Components/Contact/ContactUs";
 
 
 const HomePage = () => {
@@ -17,10 +18,10 @@ const HomePage = () => {
 
   useEffect(() => {
     axios.get(`http://localhost:3000/api/v1/pizza`).then(res => dispatch(homePageAC(res.data.data.result)))
-  },[])
+  }, [])
 
 
-  return(
+  return (
     <>
       <HomeSlider></HomeSlider>
       <Menu></Menu>
@@ -28,7 +29,7 @@ const HomePage = () => {
       <HistoryOfRestaurant></HistoryOfRestaurant>
       <BlogSection></BlogSection>
       <RestaurantStuff></RestaurantStuff>
-
+      <ContactUs></ContactUs>
     </>
   )
 }
