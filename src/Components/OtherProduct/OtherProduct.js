@@ -1,30 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import style from './OtherProduct.module.scss'
 import bg from '../../assets/about.jpg'
-import axios from "axios";
 import test from '../../assets/pizzaNoBg.png'
 
-const OtherProduct = () => {
+const OtherProduct = (props) => {
 
-  const [currentProduct,setCurrentProduct] = useState(null)
+  const {currentProduct,getStartProduct,getBurgers, getDrinks, getPastas} = props
 
-  // useEffect(() => {
-  //   getPizza()
-  // })
-  const getPizza = () => {
-    return axios.get(`http://localhost:3000/api/v1/pizza`).then(res => setCurrentProduct(res.data.data.result.splice(0,3)))
-  }
-  const getDrinks = () => {
-    return axios.get(`http://localhost:3000/api/v1/drink`).then(res => setCurrentProduct(res.data.data.result))
-  }
-  const getBurgers = () => {
-    return axios.get(`http://localhost:3000/api/v1/burger`).then(res => setCurrentProduct(res.data.data.result))
-  }
-  const getPastas = () => {
-    return axios.get(`http://localhost:3000/api/v1/pasta`).then(res => setCurrentProduct(res.data.data.result))
-  }
-
-  console.log(currentProduct)
 
   return (
     <>
@@ -36,7 +18,7 @@ const OtherProduct = () => {
         <div>
           <div className={style.lists}>
             <ul>
-              <li onClick={getPizza}>Pizza</li>
+              <li onClick={getStartProduct}>Pizza</li>
               <li onClick={getDrinks}>Drinks</li>
               <li onClick={getBurgers}>Burgers</li>
               <li onClick={getPastas}>Pasta</li>

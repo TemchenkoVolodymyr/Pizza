@@ -18,22 +18,30 @@ const Menu = () => {
   const [dataPerPage,setDataPerPage] = useState(3)
   const [loading,setLoading] = useState(false)
 
+  const [currentProduct,setCurrentProduct] = useState(null)
+
   useEffect(() => {
     if(!dataOfPizzas){
       setLoading(true)
     }else{
       setLoading(false)
     }
+
+    getPizza()
   },[dataOfPizzas])
 
-  // const test = () => {
-  //   return axios.post(`http://localhost:3000/api/v1/pizza`, {
-  //     name: 'asdasd',
-  //     description: 'asdasd',
-  //     shortDescription: "asdasd",
-  //     price: 44,
-  //   })
-  // }
+  const getPizza = () => {
+    return axios.get(`http://localhost:3000/api/v1/pizza`).then(res => setCurrentProduct(res.data.data.result.splice(0,3)))
+  }
+  const getDrinks = () => {
+    return axios.get(`http://localhost:3000/api/v1/drink`).then(res => setCurrentProduct(res.data.data.result))
+  }
+  const getBurgers = () => {
+    return axios.get(`http://localhost:3000/api/v1/burger`).then(res => setCurrentProduct(res.data.data.result))
+  }
+  const getPastas = () => {
+    return axios.get(`http://localhost:3000/api/v1/pasta`).then(res => setCurrentProduct(res.data.data.result))
+  }
 
   const indexOfLastMenuItem = currentPage * dataPerPage;
 
@@ -63,7 +71,7 @@ const Menu = () => {
 
         </div>
         <Price data={dataOfPizzas}></Price>
-        <OtherProduct></OtherProduct>
+        <OtherProduct getPastas={getPastas} getBurgers={getBurgers} getDrinks={getDrinks} currentProduct={currentProduct} getStartProduct={getPizza}></OtherProduct>
       </div>
 
     </>
