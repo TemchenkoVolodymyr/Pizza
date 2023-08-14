@@ -25,3 +25,15 @@
 .test{
   display: flex;
 }
+.wrapperHeader{
+  margin: 10px;
+  img{
+    max-width: 300px;
+    object-fit: cover;
+  }
+  p{
+    font-size: 30px;
+    font-weight: bolder;
+    color:#ef0000;
+  }
+}

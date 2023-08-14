@@ -1,18 +1,16 @@
 import React from "react";
 import style from './Modal.module.scss'
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CommentSection from "./CommentSection/CommentSection";
-import {addCommentBlog, getBlogComment} from "../BlogSection/BlogSection";
+
 
 const styleModal = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width:700,
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -22,10 +20,11 @@ const styleModal = {
 
 const CustomModal = (props) => {
 
-  const {handleClose, modal, data, callback, comment, changeComment,action,value} = props
+  const {handleClose, modal, data, callback, comment, changeComment,action,value,image,title} = props
 
   const addNewComment = () => {
     callback(value,comment,action)
+    changeComment("")
   }
 
   return (
@@ -39,7 +38,10 @@ const CustomModal = (props) => {
         >
           <Box sx={styleModal}>
             <div className={style.test}>
-              <div>dasdasd</div>
+              <div className={style.wrapperHeader}>
+                <img src={image}/>
+                <p>{title}</p>
+              </div>
               <div className={style.containerModal}>
                 {data && data.map(item => <div className={style.wrapper}>
                     <div>

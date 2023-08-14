@@ -5,14 +5,13 @@ import CustomModal from "../../CustomModal/CustomModal";
 import axios from "axios";
 
 const Blog = (props) => {
-  const {image , description , date ,title , countOfComment , callback, valueRequest, setData , data , handleClose,addComment,action} = props
+  const {image , description , date ,title , countOfComment , valueRequest , data ,addComment,action} = props
   const [modal, setModal] = useState(false)
 
   const [comment, setComment] = useState("");
 
   const openComments = () => {
     setModal(true)
-    // callback(valueRequest,setData)
   }
 
 
@@ -37,6 +36,8 @@ const Blog = (props) => {
                             changeComment={setComment}
                             value={valueRequest}
                             action={action}
+                            image={image}
+                            title={title}
       ></CustomModal> : null}
     </>
   )

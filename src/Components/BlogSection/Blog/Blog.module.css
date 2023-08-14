@@ -3,6 +3,8 @@
 }
 .wrapper img {
   width: 450px;
+  height: 395px;
+  object-fit: cover;
 }
 .wrapper p {
   max-width: 450px;

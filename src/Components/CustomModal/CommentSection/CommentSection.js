@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Box from '@mui/joy/Box';
 import IconButton from '@mui/joy/IconButton';
 import Textarea from '@mui/joy/Textarea';
@@ -7,7 +7,7 @@ import style from './CommentSection.module.scss'
 
 export default function CommentSection(props) {
 
-  const {comment, changeComment ,callback,action} = props
+  const {comment, changeComment ,callback} = props
   const addEmoji = (emoji) => () => changeComment(`${comment}${emoji}`);
   return (
     <>

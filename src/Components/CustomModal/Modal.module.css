@@ -25,4 +25,17 @@
   display: flex;
 }
 
+.wrapperHeader {
+  margin: 10px;
+}
+.wrapperHeader img {
+  max-width: 300px;
+  object-fit: cover;
+}
+.wrapperHeader p {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #ef0000;
+}
+
 /*# sourceMappingURL=Modal.module.css.map */
