@@ -9,7 +9,7 @@ import Pagination from "../../Pagination/Pagination";
 import romb from '../../assets/romb.png'
 import Price from "./Price/Price";
 import OtherProduct from "../OtherProduct/OtherProduct";
-import Blog from "../Blog/Blog";
+import BlogSection from "../BlogSection/BlogSection";
 const Menu = () => {
 
   const dataOfPizzas = useSelector((state) => state.dataOfPizzas)

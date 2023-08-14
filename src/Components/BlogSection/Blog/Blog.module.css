@@ -1,0 +1,43 @@
+.wrapper {
+  margin: 30px;
+}
+.wrapper img {
+  width: 450px;
+}
+.wrapper p {
+  max-width: 450px;
+}
+.wrapper h3 {
+  color: #fdfdfd;
+  margin: 20px 0;
+}
+
+.wrapperDate {
+  display: flex;
+  color: #868686;
+  font-size: 18px;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+.wrapperDate .comment {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 30px;
+}
+.wrapperDate .comment:hover {
+  cursor: pointer;
+}
+.wrapperDate .comment svg {
+  margin-left: 5px;
+}
+.wrapperDate .comment svg:hover {
+  margin-left: 15px;
+  color: #ef0000;
+}
+
+.description {
+  color: #868686;
+}
+
+/*# sourceMappingURL=Blog.module.css.map */

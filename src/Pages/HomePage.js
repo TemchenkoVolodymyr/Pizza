@@ -7,7 +7,7 @@ import {homePageAC} from "../Redux/HomePage/homePageAC";
 import OtherProduct from "../Components/OtherProduct/OtherProduct";
 import AboutUs from "../Components/AboutUs/AboutUs";
 import HistoryOfRestaurant from "../Components/AboutUs/HistoryOfRestaurant";
-import Blog from "../Components/Blog/Blog";
+import BlogSection from "../Components/BlogSection/BlogSection";
 
 
 const HomePage = () => {
@@ -25,7 +25,7 @@ const HomePage = () => {
       <Menu></Menu>
       <AboutUs></AboutUs>
       <HistoryOfRestaurant></HistoryOfRestaurant>
-      <Blog></Blog>
+      <BlogSection></BlogSection>
 
     </>
   )

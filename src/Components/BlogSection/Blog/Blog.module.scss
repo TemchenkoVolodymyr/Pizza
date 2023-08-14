@@ -1,0 +1,40 @@
+.wrapper{
+  margin: 30px;
+  img{
+    width: 450px;
+  }
+  p{
+    max-width: 450px;
+  }
+  h3{
+    color:#fdfdfd;
+    margin: 20px 0;
+  }
+}
+.wrapperDate{
+  display: flex;
+  color: #868686;
+  font-size: 18px;
+  margin: 20px 0;
+  justify-content: space-between;
+  .comment{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 30px;
+    &:hover{
+      cursor: pointer;
+    }
+    svg{
+      margin-left: 5px;
+      &:hover{
+      margin-left: 15px;
+        color:#ef0000;
+      }
+    }
+  }
+
+}
+.description{
+  color: #868686;
+}

@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import CommentSection from "./CommentSection/CommentSection";
+import {addCommentBlog, getBlogComment} from "../BlogSection/BlogSection";
 
 const styleModal = {
   position: 'absolute',
@@ -17,13 +19,18 @@ const styleModal = {
   p: 4,
 };
 
+
 const CustomModal = (props) => {
 
-  const {handleClose,modal,data} = props
+  const {handleClose, modal, data, callback, comment, changeComment,action,value} = props
 
-  return(
+  const addNewComment = () => {
+    callback(value,comment,action)
+  }
+
+  return (
     <>
-      <div>
+      <div className={style.container}>
         <Modal
           open={modal}
           onClose={handleClose}
@@ -31,22 +38,27 @@ const CustomModal = (props) => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={styleModal}>
-            <div>
-              {data && data.map(item => <div>
-                <p>{item.author}</p>
-                <p>{item.comment}</p>
-                </div>
-                )}
-            </div>
-            <div>
+            <div className={style.test}>
+              <div>dasdasd</div>
+              <div className={style.containerModal}>
+                {data && data.map(item => <div className={style.wrapper}>
+                    <div>
+                      <p>{item.author}</p>
+                      <p>{item.date}</p>
+                    </div>
 
-              <input type={"text"}/>
-              <button>send</button>
+                    <p className={style.comment}>{item.comment}</p>
+                  </div>
+                )}
+              </div>
             </div>
+              <div>
+                <CommentSection comment={comment} changeComment={changeComment} callback={addNewComment} action={action}></CommentSection>
+              </div>
           </Box>
         </Modal>
       </div>
     </>
-  )
+)
 }
 export default CustomModal;
