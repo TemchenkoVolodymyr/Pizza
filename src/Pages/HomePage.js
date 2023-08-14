@@ -8,6 +8,7 @@ import OtherProduct from "../Components/OtherProduct/OtherProduct";
 import AboutUs from "../Components/AboutUs/AboutUs";
 import HistoryOfRestaurant from "../Components/AboutUs/HistoryOfRestaurant";
 import BlogSection from "../Components/BlogSection/BlogSection";
+import RestaurantStuff from "../Components/AboutUs/RestaurantStuff/RestaurantStuff";
 
 
 const HomePage = () => {
@@ -26,6 +27,7 @@ const HomePage = () => {
       <AboutUs></AboutUs>
       <HistoryOfRestaurant></HistoryOfRestaurant>
       <BlogSection></BlogSection>
+      <RestaurantStuff></RestaurantStuff>
 
     </>
   )
