@@ -10,6 +10,7 @@ import HistoryOfRestaurant from "../Components/AboutUs/HistoryOfRestaurant";
 import BlogSection from "../Components/BlogSection/BlogSection";
 import RestaurantStuff from "../Components/AboutUs/RestaurantStuff/RestaurantStuff";
 import ContactUs from "../Components/Contact/ContactUs";
+import FooterContact from "../Components/FooterContact/FooterContact";
 
 
 const HomePage = () => {
@@ -30,6 +31,7 @@ const HomePage = () => {
       <BlogSection></BlogSection>
       <RestaurantStuff></RestaurantStuff>
       <ContactUs></ContactUs>
+      <FooterContact></FooterContact>
     </>
   )
 }
