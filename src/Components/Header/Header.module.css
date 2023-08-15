@@ -15,6 +15,8 @@
 }
 .container .wrapperList ul {
   display: flex;
+  color: #ffffff;
+  font-weight: bold;
 }
 .container .wrapperList ul li {
   list-style: none;
@@ -27,7 +29,10 @@
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.32);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=Header.module.css.map */

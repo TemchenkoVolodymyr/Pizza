@@ -13,6 +13,8 @@
     justify-content: center;
     ul{
       display: flex;
+      color: #ffffff;
+      font-weight: bold;
 
       li{
         list-style: none;
@@ -21,6 +23,7 @@
         &:hover{
           cursor: pointer;
           color:#ef0000;
+
         };
       }
     }
@@ -29,5 +32,8 @@
 }
 
 .header{
-  background-color: rgba(0, 0, 0, 0.32);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
