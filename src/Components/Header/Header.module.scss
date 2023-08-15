@@ -3,21 +3,40 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  color:#868686;
   img{
     max-width: 200px;
   }
   .wrapperList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     ul{
       display: flex;
+      color: #ffffff;
+      font-weight: bold;
+
       li{
         list-style: none;
         padding: 5px;
         margin: 0 25px;
         &:hover{
           cursor: pointer;
+          color:#ef0000;
+
         };
       }
     }
 
   }
+}
+
+.header{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.logo{
+  cursor: pointer;
 }

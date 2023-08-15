@@ -8,6 +8,10 @@
   max-width: 1200px;
   .description{
     //width: 500px;
+    padding: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+
   }
 
 }
@@ -19,6 +23,9 @@
 .wrapperImage{
   img{
     max-width: 100px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
   }
 }
 .main{
@@ -33,7 +40,9 @@
   border-bottom: 2px dashed #ef0000;
 p{
   color: #de6908;
-  padding: 10px;
+  padding: 0 10px;
   font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 }

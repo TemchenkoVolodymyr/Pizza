@@ -2,32 +2,55 @@
   display: flex;
   flex-wrap: wrap;
   margin: 5px;
-  img{
-    max-width: 290px;
+  .container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.9s;
+    border-radius: 5px;
+    &:hover{
+      box-shadow: inset 100vh 1vh rgba(0, 0, 0, 0.42);
+      .descriptionItem{
+        visibility: visible;
+      }
+      //.wrapperPrice{
+      //  visibility: visible;
+      //}
+    }
   }
   .descriptionItem{
-    max-width: 300px;
+    visibility: hidden;
     padding: 10px;
     .name{
-      color: #cecece;
-      font-size: 20px;
+      color: #ffffff;
+      font-size: 25px;
       margin-bottom: 15px;
     }
     .description{
-      font-size: 16px;
+      font-size: 20px;
       margin-bottom: 15px;
+      color: #c5c4c4;
     }
     .price{
       font-size: 20px;
       span{
-        color:#ef0000;
+        color: #ff0000;
+        font-size: 30px;
       }
     }
   }
 }
 .wrapperItems{
   display: flex;
-  margin-bottom: 15px;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  //box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
 
 }
 .wrapperPrice{
@@ -37,16 +60,19 @@
     padding: 0 15px;
   }
   button{
-    background-color: transparent;
-    border: 1px solid #ef0000;
-    color: #ef0000;
+    background-color: #ef0000;
+    border: none;
+    color: #f8f8f8;
     padding: 15px 20px;
     cursor: pointer;
-    transition: all 0.5s;
+    font-size: 20px;
+    //transition: all 0.5s;
     &:hover{
-      padding: 15px 30px;
-      border: 1px solid white;
-      color: #fdfdfd;
+      //padding: 15px 30px;
+      //border: 1px solid white;
+      background-color: #de6908;
+      color: #000000;
+
     }
   }
 }

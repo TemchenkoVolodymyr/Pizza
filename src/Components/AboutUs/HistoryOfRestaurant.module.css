@@ -22,8 +22,10 @@
   max-width: 800px;
   color: #cecece;
   letter-spacing: 1px;
-  line-height: 25px;
   margin-top: 50px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
 }
 .about h2 {
   color: #fdfdfd;

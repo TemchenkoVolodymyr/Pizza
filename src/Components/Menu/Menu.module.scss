@@ -45,6 +45,17 @@
 .headerMenu{
   margin-bottom: 100px;
   text-align: center;
+  h1{
+    margin-bottom: 20px;
+
+  }
+  p{
+    font-size: 18px !important;
+    color: #868686;
+    //font-weight: bolder;
+
+    letter-spacing: 1px;
+  }
 }
 .wrapperPrice{
   display: flex;
@@ -84,6 +95,8 @@
   p{
     font-size: 16px;
     text-align: center;
+    line-height: 30px;
+    letter-spacing: 1px;
   }
 
 }

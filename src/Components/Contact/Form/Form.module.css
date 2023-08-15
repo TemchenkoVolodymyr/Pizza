@@ -27,4 +27,9 @@ form button:hover {
   color: #fdfdfd;
 }
 
+.succeed {
+  margin-top: 5px;
+  color: #0e6024;
+}
+
 /*# sourceMappingURL=Form.module.css.map */

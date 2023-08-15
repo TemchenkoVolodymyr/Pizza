@@ -1,5 +1,6 @@
 .container{
   display: flex;
+  height: 150px;
   .info{
     width: 70%;
     background-color: black;
@@ -30,6 +31,9 @@
     background-color: orange;
     width: 30%;
     padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     svg{
       color: #ffffff;
       font-size: 30px;

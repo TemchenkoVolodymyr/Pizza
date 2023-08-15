@@ -3,32 +3,50 @@
   flex-wrap: wrap;
   margin: 5px;
 }
-.itemsMenu img {
-  max-width: 290px;
+.itemsMenu .container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.9s;
+  border-radius: 5px;
+}
+.itemsMenu .container:hover {
+  box-shadow: inset 100vh 1vh rgba(0, 0, 0, 0.42);
+}
+.itemsMenu .container:hover .descriptionItem {
+  visibility: visible;
 }
 .itemsMenu .descriptionItem {
-  max-width: 300px;
+  visibility: hidden;
   padding: 10px;
 }
 .itemsMenu .descriptionItem .name {
-  color: #cecece;
-  font-size: 20px;
+  color: #ffffff;
+  font-size: 25px;
   margin-bottom: 15px;
 }
 .itemsMenu .descriptionItem .description {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 15px;
+  color: #c5c4c4;
 }
 .itemsMenu .descriptionItem .price {
   font-size: 20px;
 }
 .itemsMenu .descriptionItem .price span {
-  color: #ef0000;
+  color: #ff0000;
+  font-size: 30px;
 }
 
 .wrapperItems {
   display: flex;
-  margin-bottom: 15px;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .wrapperPrice {
@@ -39,17 +57,16 @@
   padding: 0 15px;
 }
 .wrapperPrice button {
-  background-color: transparent;
-  border: 1px solid #ef0000;
-  color: #ef0000;
+  background-color: #ef0000;
+  border: none;
+  color: #f8f8f8;
   padding: 15px 20px;
   cursor: pointer;
-  transition: all 0.5s;
+  font-size: 20px;
 }
 .wrapperPrice button:hover {
-  padding: 15px 30px;
-  border: 1px solid white;
-  color: #fdfdfd;
+  background-color: #de6908;
+  color: #000000;
 }
 
 /*# sourceMappingURL=MenuItems.module.css.map */

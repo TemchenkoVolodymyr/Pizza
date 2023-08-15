@@ -7,7 +7,8 @@ import style from './Form.module.scss'
 
 let Form = (props) => {
 
-  const {onSubmit} = props
+
+  const {onSubmit, isSucceed} = props
 
   return (
     <form onSubmit={onSubmit} className={style.container}>
@@ -16,14 +17,18 @@ let Form = (props) => {
         <Field name="firstName" component="input"/>
       </div>
       <div>
-        <label htmlFor="lastName">Last Name</label>
-        <Field name="lastName" component="input" type="text" />
-      </div>
-      <div>
-        <label htmlFor="email">Message</label>
+        <label htmlFor="email">Email</label>
         <Field name="email" component="input" type="email" />
       </div>
-      <button type="submit">Send</button>
+      <div>
+        <label htmlFor="message">Message</label>
+        <Field name="message" component="input" type="text" />
+      </div>
+
+        <button type="submit">Send</button>
+      {isSucceed ?  <p className={style.succeed}>Succeed.We have got your message and will contact with for a short time</p> : null }
+
+
     </form>
   );
 };

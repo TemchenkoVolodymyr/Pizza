@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  height: 150px;
 }
 .container .info {
   width: 70%;
@@ -29,6 +30,9 @@
   background-color: orange;
   width: 30%;
   padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container .social svg {
   color: #ffffff;

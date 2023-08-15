@@ -7,12 +7,18 @@
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
-  margin: 0 50px;
+  margin: 100px 50px;
+}
+.container .wrapperBlog h1 {
+  letter-spacing: 1px;
 }
 .container .wrapper {
   text-align: left;
   color: #868686;
   margin: 20px;
+}
+.container .wrapper .header {
+  margin-left: 30px;
 }
 .container .wrapper h1 {
   color: #fdfdfd;
@@ -30,13 +36,15 @@
   list-style: none;
   padding: 5px;
   color: #868686;
+  letter-spacing: 1px;
 }
 .container .description {
   margin-top: 10px;
   color: #868686;
   max-width: 200px;
   text-align: left;
-  line-height: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
   font-size: 15px;
 }
 
@@ -45,6 +53,8 @@
 }
 .wrapperBlogs h3 {
   max-width: 200px;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 
 .questions h1 {
@@ -54,6 +64,7 @@
   display: flex;
   align-items: center;
   margin: 10px 0;
+  letter-spacing: 1px;
   padding: 5px;
 }
 .questions p svg {
