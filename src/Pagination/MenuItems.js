@@ -12,9 +12,9 @@ const MenuItems = (props) => {
       <>
         <div className={style.itemsMenu}>
           {menuData && menuData.map(item => <div className={style.wrapperItems}>
-            <div>
-              <img src={pizzaImage} alt="image"/>
-            </div>
+            <div style={{backgroundImage:`url(${pizzaImage})`}} className={style.container}>
+              {/*<img src={pizzaImage} alt="image"/>*/}
+
 
             <div className={style.descriptionItem}>
               <p className={style.name}>{item.name}</p>
@@ -23,6 +23,7 @@ const MenuItems = (props) => {
                 <p className={style.price}><span>$ {item.price}</span></p>
                 <button>Order</button>
               </div>
+            </div>
             </div>
           </div>)}
         </div>

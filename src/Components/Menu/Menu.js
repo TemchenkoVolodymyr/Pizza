@@ -58,8 +58,7 @@ const Menu = () => {
           <h1>
             HOT PIZZA MEALS
           </h1>
-          <p>Far far away,behind the word mountains,far fram the countries Vakalia and Cansonantia,there live the blind
-            texts</p>
+          <p>Our masters have been working hard for a long time to create a masterpiece. Finally, you can enjoy it</p>
         </div>
         <MenuItems menuData={currentMenu} loading={loading}></MenuItems>
         <Pagination dataPerPage={dataPerPage} totalItems={dataOfPizzas.length} paginate={paginate}></Pagination>
