@@ -13,7 +13,7 @@ const HomeSlider = () => {
     {
       title: "Welcome",
       header:"WE COOKED YOUR DESIRED PIZZA RECIPE",
-      description:"Do you want to taste the real taste of pizza?"
+      description:"Would you like to taste the authentic flavor of pizza?"
     },
     {
       title: "Delicious",

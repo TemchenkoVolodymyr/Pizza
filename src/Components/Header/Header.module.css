@@ -35,4 +35,8 @@
   width: 100%;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=Header.module.css.map */

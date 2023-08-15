@@ -29,14 +29,37 @@ const HomePage = () => {
 
   return (
     <>
-      <HomeSlider></HomeSlider>
+      <section id="home">
+        <HomeSlider></HomeSlider>
+      </section>
+      <section id='menu'>
       <Menu></Menu>
+
+      </section>
+      <section id={'about'}>
       <AboutUs></AboutUs>
+
+      </section>
+      <section>
       <HistoryOfRestaurant></HistoryOfRestaurant>
+
+      </section>
+      <section id={'blog'}>
       <BlogSection></BlogSection>
+
+      </section>
+      <section id={'services'}>
       <RestaurantStuff></RestaurantStuff>
+
+      </section>
+      <section id={"contact"}>
       <ContactUs></ContactUs>
+
+      </section>
+      <section >
       <FooterContact></FooterContact>
+
+      </section>
     </>
   )
 }
