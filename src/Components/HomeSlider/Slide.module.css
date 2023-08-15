@@ -10,10 +10,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  filter: brightness(0.9);
+}
+.carousel .wrapperHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 300px;
 }
 .carousel .btns {
-  margin-top: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +71,33 @@
 }
 
 .dot:hover {
+  color: #ef0000;
+}
+
+.homeMessage {
+  text-align: center;
+}
+.homeMessage .welcome {
+  font-size: 36px;
+  font-weight: lighter;
+  color: #ef0000;
+  font-style: italic;
+  font-family: "Bodoni MT Poster Compressed";
+}
+.homeMessage h1 {
+  color: #fdfdfd;
+  margin: 10px 0;
+  max-width: 600px;
+  font-family: Bahnschrift;
+}
+.homeMessage .description {
+  font-size: 19px;
+  color: #ffffff;
+  margin: 30px 0;
+}
+.homeMessage .description span {
+  font-size: 25px;
+  font-weight: bold;
   color: #ef0000;
 }
 
