@@ -27,10 +27,10 @@ const OtherProduct = (props) => {
 
           <div className={style.containerProducts}>
             {currentProduct && currentProduct.map(item => <div className={style.wrapper}>
-              <img src={test} alt="image"/>
+              <img src={`otherProducts/${item.image}`} alt="image"/>
               <div>
                 <h1>{item.name}</h1>
-                <p className={style.description}>{item.shortDesciption}</p>
+                <p className={style.description}>{item.shortDescription}</p>
               </div>
 
               <p className={style.price}>$ {item.price}</p>

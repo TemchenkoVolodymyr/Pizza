@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import style from './MenuItems.module.scss'
-import pizzaImage from "../assets/pizza-1.jpg";
+
+
 
 const MenuItems = (props) => {
   const {loading, menuData} = props
@@ -8,14 +9,13 @@ const MenuItems = (props) => {
   if (loading) {
     return <h1>loading...</h1>
   }
+
+
     return (
       <>
         <div className={style.itemsMenu}>
           {menuData && menuData.map(item => <div className={style.wrapperItems}>
-            <div style={{backgroundImage:`url(${pizzaImage})`}} className={style.container}>
-              {/*<img src={pizzaImage} alt="image"/>*/}
-
-
+            <div style={{backgroundImage:`url(pizza/${item.image})`}} className={style.container}>
             <div className={style.descriptionItem}>
               <p className={style.name}>{item.name}</p>
               <p className={style.description}>{item.description}</p>

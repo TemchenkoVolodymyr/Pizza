@@ -49,7 +49,12 @@ const BlogSection = () => {
   };
 
 
-  const description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequatur cum debitis distinctio dolorum ducimus facilis, magnam placeat quaerat quam quisquam rem rerum tempora, tempore unde vel velit voluptatem voluptatum"
+
+  const description = "Because if someone asks \"where to eat a good Neapolitan pizza\" I can not accept that someone else shows me a place where the pizza appears flat like a sole and then tells me \"because I don't like the pizza with the swollen crust, in my opinion the real good pizza is the low one"
+  const descriptionFirstBlog = 'I discovered that in many cities of Europe the Neapolitan pizza has firmly established itself as a cultural product. In the United Kingdom you go beyond London: you can find it in Manchester, Bristol, Kent, Glasgow. In Germany, between Berlin, Cologne, Munich is slowly conquering its spaces. And it doesn\'t stop here: Paris, Madrid, Brussels, Prague'
+  const descriptionSecondBlog = 'But there\'s more: because Neapolitan pizza is conquering the world! I discovered that in the United States the culture has spread even earlier than in Europe (with all the hybridizations of the case). I\'ve been to New York and I\'ve eaten in three pizzerias, only a paltry percentage of those in the Big Apple. And we want to talk about the nascent market of Asia, Japan in the lead '
+  const descriptionThirdBlog = 'I preferred to devote my energies to emerging realities, still little known, to draw a picture of what is an increasingly growing phenomenon outside Italy, but paradoxically still ignored by the Italian experts themselves. My range of action goes beyond the boundaries of the boot, which I prefer to leave to the pen of many other professionals.'
+
   return (
     <>
       <div className={style.container} style={{backgroundImage: `url(${bg})`}}>
@@ -65,7 +70,7 @@ const BlogSection = () => {
                 image={italianFried}
                 date={'10 Sept , 2020'}
                 countOfComment={dataBlogComments ? italianMeet.length : 0}
-                title="Italian Fried Meet" description={description}
+                title="Italian Fried Meet" description={descriptionFirstBlog}
                 callback={getBlogComment}
                 valueRequest={"italianMeet"}
                 modal={modal}
@@ -76,7 +81,7 @@ const BlogSection = () => {
 
           ></Blog>
           <Blog openComment={setModal} image={bg2} date={'12 July , 2022'}
-                countOfComment={dataBlogComments ? arabicMeetData.length : 0} title="Arabic Meet" description={description}
+                countOfComment={dataBlogComments ? arabicMeetData.length : 0} title="Arabic Meet" description={descriptionSecondBlog}
                 callback={getBlogComment} valueRequest={"arabicMeet"}
                 data={arabicMeetData}
                 handleClose={handleClose}
@@ -85,7 +90,7 @@ const BlogSection = () => {
           ></Blog>
           <Blog  openComment={setModal} image={bg3} date={'1 Sept , 2023'}
                 countOfComment={dataBlogComments ? booksPizzaMeetData.length : 0} title="Books Pizza Meet"
-                description={description} callback={getBlogComment} valueRequest={"booksPizzaMeet"}
+                description={descriptionThirdBlog} callback={getBlogComment} valueRequest={"booksPizzaMeet"}
                 data={booksPizzaMeetData}
                 handleClose={handleClose}
                 addComment={addCommentBlog}

@@ -6,12 +6,21 @@
   justify-content: center;
   max-width: 1200px;
 }
+.container .description {
+  padding: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
 .wrapperText {
   width: 400px;
 }
 
 .wrapperImage img {
   max-width: 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
 .main {
@@ -28,8 +37,10 @@
 }
 .wrapperPrice p {
   color: #de6908;
-  padding: 10px;
+  padding: 0 10px;
   font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=Price.module.css.map */

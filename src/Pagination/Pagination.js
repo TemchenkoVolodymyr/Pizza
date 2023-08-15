@@ -9,7 +9,7 @@ const Pagination = (props) => {
 
   const [modal,setModal] = useState(false)
 
-  const [isAdmin,setIsAdmin] = useState(true)
+  const [isAdmin,setIsAdmin] = useState(false)
 
   for (let i = 1; i <= Math.ceil(totalItems / dataPerPage); i++) {
     pageNumbers.push(i)

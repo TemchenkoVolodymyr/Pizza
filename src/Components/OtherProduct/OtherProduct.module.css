@@ -32,7 +32,9 @@
   margin-left: 100px;
 }
 .containerProducts img {
-  max-width: 200px;
+  width: 200px;
+  height: 205px;
+  object-fit: cover;
 }
 .containerProducts .wrapper {
   text-align: center;
@@ -45,6 +47,7 @@
 }
 .containerProducts .wrapper div {
   max-width: 300px;
+  height: 200px;
 }
 .containerProducts .wrapper button {
   background-color: transparent;
@@ -67,6 +70,8 @@
 
 .description {
   margin-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=OtherProduct.module.css.map */

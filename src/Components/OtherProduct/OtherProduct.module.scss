@@ -1,6 +1,6 @@
 .container {
- padding-right: 15px;
- padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   padding-bottom: 100px;
   display: flex;
 
@@ -40,40 +40,51 @@
   margin-left: 100px;
 
   img {
-    max-width: 200px;
+    width: 200px;
+    height: 205px;
+    object-fit: cover;
   }
 
   .wrapper {
     text-align: center;
     margin-top: 50px;
     width: 300px;
-    h1{
+
+    h1 {
       font-size: 20px;
-      margin: 20px 0 ;
+      margin: 20px 0;
     }
+
     div {
-  max-width: 300px;
+      max-width: 300px;
+      height: 200px;
     }
-    button{
+
+    button {
       background-color: transparent;
       border: 1px solid #ef0000;
       color: #ef0000;
       padding: 15px 20px;
       cursor: pointer;
       transition: all 0.5s;
-      &:hover{
+
+      &:hover {
         padding: 15px 30px;
         border: 1px solid white;
         color: #fdfdfd;
       }
     }
   }
-  .price{
-    color:#ef0000;
+
+  .price {
+    color: #ef0000;
     padding: 15px;
     font-size: 19px;
   }
 }
-.description{
+
+.description {
   margin-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
 }

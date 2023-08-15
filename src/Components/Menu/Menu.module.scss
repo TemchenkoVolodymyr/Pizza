@@ -52,7 +52,9 @@
   p{
     font-size: 18px !important;
     color: #868686;
-    font-weight: bolder;
+    //font-weight: bolder;
+
+    letter-spacing: 1px;
   }
 }
 .wrapperPrice{
@@ -93,6 +95,8 @@
   p{
     font-size: 16px;
     text-align: center;
+    line-height: 30px;
+    letter-spacing: 1px;
   }
 
 }
