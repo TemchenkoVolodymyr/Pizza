@@ -2,9 +2,9 @@
 import './App.css';
 import {Route, Routes} from "react-router-dom";
 import Layout from "../Router/Layout";
-import HomePage from "../Pages/HomePage";
+import HomePage from "../Pages/HomePage/HomePage";
 import OtherProduct from "../Components/OtherProduct/OtherProduct";
-import CartPage from "../Pages/CartPage";
+import CartPage from "../Pages/CartPage/CartPage";
 
 function App() {
   return (

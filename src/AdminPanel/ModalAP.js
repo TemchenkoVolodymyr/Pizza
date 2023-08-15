@@ -4,7 +4,7 @@ import Modal from '@mui/material/Modal';
 import CustomInput from "./CustomInput/CustomInput";
 import axios from "axios";
 import {useDispatch} from "react-redux";
-import {getPizzas} from "../Pages/HomePage";
+import {getPizzas} from "../Pages/HomePage/HomePage";
 
 
 const styleModal = {

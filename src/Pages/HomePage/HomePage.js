@@ -1,16 +1,16 @@
-import HomeSlider from "../Components/HomeSlider/HomeSlider";
-import Menu from "../Components/Menu/Menu";
+import HomeSlider from "../../Components/HomeSlider/HomeSlider";
+import Menu from "../../Components/Menu/Menu";
 import {useEffect} from "react";
 import axios from "axios";
 import {useDispatch} from "react-redux";
-import {homePageAC} from "../Redux/HomePage/homePageAC";
-import OtherProduct from "../Components/OtherProduct/OtherProduct";
-import AboutUs from "../Components/AboutUs/AboutUs";
-import HistoryOfRestaurant from "../Components/AboutUs/HistoryOfRestaurant";
-import BlogSection from "../Components/BlogSection/BlogSection";
-import RestaurantStuff from "../Components/AboutUs/RestaurantStuff/RestaurantStuff";
-import ContactUs from "../Components/Contact/ContactUs";
-import FooterContact from "../Components/FooterContact/FooterContact";
+import {homePageAC} from "../../Redux/HomePage/homePageAC";
+import OtherProduct from "../../Components/OtherProduct/OtherProduct";
+import AboutUs from "../../Components/AboutUs/AboutUs";
+import HistoryOfRestaurant from "../../Components/AboutUs/HistoryOfRestaurant";
+import BlogSection from "../../Components/BlogSection/BlogSection";
+import RestaurantStuff from "../../Components/AboutUs/RestaurantStuff/RestaurantStuff";
+import ContactUs from "../../Components/Contact/ContactUs";
+import FooterContact from "../../Components/FooterContact/FooterContact";
 
 
 export const getPizzas = (dispatch) => {
