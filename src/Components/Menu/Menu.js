@@ -15,7 +15,7 @@ const Menu = () => {
   const dataOfPizzas = useSelector((state) => state.dataOfPizzas)
 
   const [currentPage,setCurrentPage] = useState(1)
-  const [dataPerPage,setDataPerPage] = useState(3)
+  const [dataPerPage,setDataPerPage] = useState(6)
   const [loading,setLoading] = useState(false)
 
   const [currentProduct,setCurrentProduct] = useState(null)

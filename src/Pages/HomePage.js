@@ -13,12 +13,17 @@ import ContactUs from "../Components/Contact/ContactUs";
 import FooterContact from "../Components/FooterContact/FooterContact";
 
 
+export const getPizzas = (dispatch) => {
+  axios.get(`http://localhost:3000/api/v1/pizza`).then(res => dispatch(homePageAC(res.data.data.result)))
+}
+
 const HomePage = () => {
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/v1/pizza`).then(res => dispatch(homePageAC(res.data.data.result)))
+    // axios.get(`http://localhost:3000/api/v1/pizza`).then(res => dispatch(homePageAC(res.data.data.result)))
+    getPizzas(dispatch)
   }, [])
 
 
