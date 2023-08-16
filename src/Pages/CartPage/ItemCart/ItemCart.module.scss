@@ -1,0 +1,89 @@
+.container {
+  border-top: 1px solid #919191;
+  width: 80%;
+  margin: 20px;
+
+  .wrapper {
+    border-bottom: 1px solid #919191;
+    padding: 20px;
+
+    img {
+      max-width: 200px;
+    }
+
+    .wrapperProduct {
+      display: flex;
+      justify-content: space-between;
+      .ingredients {
+        color: #868686;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-size: 17px;
+      }
+
+      .size {
+        color: #868686;
+        letter-spacing: 1px;
+        font-size: 17px;
+      }
+      .totalCurrentPizzaPrice{
+        .totalPrice{
+          font-size: 20px;
+          font-weight: bolder;
+        }
+      }
+    }
+    .name {
+      font-size: 22px;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .wrapperUnderList {
+    ul {
+      display: flex;
+      margin-left: 250px;
+
+      li {
+        list-style: none;
+        margin: 0 20px;
+        font-size: 20px;
+        color: #868686;
+        display: flex;
+        align-items: center;
+        svg{
+          margin-left: 20px;
+          color: #de6908;
+          font-size: 30px;
+        }
+        &:hover{
+          cursor: pointer;
+          color:#de6908;
+        }
+      }
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 305px;
+    p{
+     font-size: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0 20px;
+    }
+  }
+  .wrapperCount{
+.price{
+  font-size: 20px;
+  font-weight: bolder;
+}
+  }
+}

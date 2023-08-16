@@ -1,0 +1,65 @@
+.container table {
+  margin-top: 50px;
+  width: 100%;
+}
+.container table tr {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 27px;
+  color: #868686;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.container table tr td {
+  padding: 10px 0;
+}
+.container table .total {
+  color: black !important;
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+.promoCode input {
+  padding: 15px;
+  font-size: 20px;
+}
+.promoCode button {
+  background-color: black;
+  color: #fdfdfd;
+  padding: 17px;
+  font-size: 20px;
+  width: 120px;
+  border: none;
+}
+.promoCode button:hover {
+  cursor: pointer;
+}
+
+.checkoutBtnWrapper {
+  text-align: center;
+}
+.checkoutBtnWrapper p {
+  margin: 30px 0;
+  font-size: 18px;
+  color: #868686;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.checkoutBtnWrapper p span {
+  color: #ef0000;
+}
+.checkoutBtnWrapper button {
+  background-color: #911919;
+  color: #000000;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  width: 300px;
+}
+.checkoutBtnWrapper button:hover {
+  cursor: pointer;
+  background-color: #730505;
+}
+
+/*# sourceMappingURL=PromoCode.module.css.map */

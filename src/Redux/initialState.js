@@ -4,6 +4,9 @@ const initialState = {
     arabicMeet: [],
     booksPizzaMeet:[],
     italianFriedMeet:[]
+  },
+  cart:{
+    orders:[]
   }
 }
 

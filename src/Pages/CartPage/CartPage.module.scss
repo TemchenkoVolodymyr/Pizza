@@ -1,4 +1,37 @@
 .container{
-  border-top: 2px solid black;
-  margin-top: 100px;
+  //border-top: 2px solid black;
+margin: 20px;
+  h1{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    padding: 50px;
+  }
+  .cartName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper{
+    display: flex;
+  }
+  .wrapperItems{
+    width: 100%;
+  }
+  .total {
+    //max-width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    max-width: 835px;
+    margin-left: 330px;
+    p{
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0 20px;
+    }
+  }
 }

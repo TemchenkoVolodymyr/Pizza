@@ -1,0 +1,77 @@
+.container {
+  border-top: 1px solid #919191;
+  width: 80%;
+  margin: 20px;
+}
+.container .wrapper {
+  border-bottom: 1px solid #919191;
+  padding: 20px;
+}
+.container .wrapper img {
+  max-width: 200px;
+}
+.container .wrapper .wrapperProduct {
+  display: flex;
+  justify-content: space-between;
+}
+.container .wrapper .wrapperProduct .ingredients {
+  color: #868686;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+.container .wrapper .wrapperProduct .size {
+  color: #868686;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.container .wrapper .wrapperProduct .totalCurrentPizzaPrice .totalPrice {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.container .wrapper .name {
+  font-size: 22px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.container .wrapperUnderList ul {
+  display: flex;
+  margin-left: 250px;
+}
+.container .wrapperUnderList ul li {
+  list-style: none;
+  margin: 0 20px;
+  font-size: 20px;
+  color: #868686;
+  display: flex;
+  align-items: center;
+}
+.container .wrapperUnderList ul li svg {
+  margin-left: 20px;
+  color: #de6908;
+  font-size: 30px;
+}
+.container .wrapperUnderList ul li:hover {
+  cursor: pointer;
+  color: #de6908;
+}
+.container .total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 305px;
+}
+.container .total p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.container .total p {
+  margin: 0 20px;
+}
+.container .wrapperCount .price {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=ItemCart.module.css.map */
