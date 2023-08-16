@@ -1,43 +1,62 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import style from './ItemCart.module.scss'
+import CustomSelect from "./CustomSelect/CustomSelect";
+import {useDispatch} from "react-redux";
+import {changeQuantityCartAC} from "../../../Redux/Cart/cartAC";
 
 const ItemCart = (props) => {
 
-  const {name,ingredients,size,price} = props
+  const [currentNumOfItems,setCurrentNumOfItems] = useState(1)
+  const dispatch = useDispatch()
+
+  const [currentItemTotal,setCurrentItemTotal] = useState(0)
+  const {data , increaseTotal,totalSum} = props
+  const changeCountOfItem = (currentCount) => {
+    setCurrentNumOfItems(currentCount)
+  }
+  useEffect(() =>{
+    increaseTotal(totalSum + currentItemTotal)
+  },[currentItemTotal])
+
+  const changeQuantity = (num) => {
+
+    dispatch(changeQuantityCartAC(num,data.id))
+  }
+
   return (
     <div className={style.container}>
       <div className={style.wrapper}>
-        <div>
-          <img alt='image'/>
+        <div className={style.wrapperProduct}>
+          <img alt='image' src={`pizza/${data?.image}`}/>
           <div>
-            <p>{name}</p>
-            <p>{ingredients}</p>
-            <p>{size}</p>
+            <p className={style.name}>{data?.name}</p>
+            <p className={style.ingredients}>Ingredients : {data?.ingredients}</p>
+            <p className={style.size}>Size : {data?.size}</p>
+          </div>
+          <div className={style.wrapperCount}>
+            <p className={style.name}>Each</p>
+            <p className={style.price}>$ {data?.price}</p>
           </div>
           <div>
-            <p>Each</p>
-            <p>$ {price}</p>
+            <p className={style.name}>Quantity</p>
+            <CustomSelect changeQuantity={changeQuantity} currentItemTotalPrice={setCurrentItemTotal} currentNumOfItems={currentNumOfItems} currentPrice={data?.price} increaseTotal={increaseTotal} increaseQuantity={changeCountOfItem}></CustomSelect>
           </div>
-          <div>
-            <p>Quantity</p>
-            <p>select quantity</p>
-          </div>
-          <div>
-            <p>Total</p>
-            <p>$5</p>
+          <div className={style.totalCurrentPizzaPrice}>
+            <p className={style.name}>Total</p>
+            <p  className={style.totalPrice}>$ {currentItemTotal.toFixed(1)}</p>
           </div>
         </div>
-        <div>
+        <div className={style.wrapperUnderList}>
           <ul>
             <li>Remove</li>
             <li>Edit</li>
           </ul>
         </div>
       </div>
-      <div>
-        <p>count of items</p>
-        <p>total price</p>
-      </div>
+      {/*<div className={style.total}>*/}
+      {/*  <p>{currentNumOfItems} Items</p>*/}
+      {/*  <p>$ {data?.price * currentNumOfItems}</p>*/}
+      {/*</div>*/}
     </div>
   );
 };

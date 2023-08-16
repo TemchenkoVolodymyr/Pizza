@@ -15,5 +15,21 @@
 .container .wrapper {
   display: flex;
 }
+.container .wrapperItems {
+  width: 100%;
+}
+.container .total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 305px;
+}
+.container .total p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.container .total p {
+  margin: 0 20px;
+}
 
 /*# sourceMappingURL=CartPage.module.css.map */

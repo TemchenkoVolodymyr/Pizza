@@ -10,7 +10,28 @@ const MenuItems = (props) => {
     return <h1>loading...</h1>
   }
 
+  const setOrderToLocalStorage = (image,price,name,id) => {
+    const orderData = {
+      image,
+      price,
+      name,
+      ingredients:'Tomato,chess',
+      size:'Large',
+      quantity:1,
+      id
+    }
+    const isLocalStorage = localStorage.getItem('order')
+    if(isLocalStorage) {
+      const parseArray = [JSON.parse(isLocalStorage)]
+      const include = [...parseArray,orderData]
+      localStorage.setItem('order',JSON.stringify(include))
+    }else{
+      localStorage.setItem('order',JSON.stringify(orderData))
+    }
 
+  }
+
+  console.log(menuData)
     return (
       <>
         <div className={style.itemsMenu}>
@@ -21,7 +42,7 @@ const MenuItems = (props) => {
               <p className={style.description}>{item.description}</p>
               <div className={style.wrapperPrice}>
                 <p className={style.price}><span>$ {item.price}</span></p>
-                <button>Order</button>
+                <button onClick={() => setOrderToLocalStorage(item.image,item.price,item.name,item._id)}>Order</button>
               </div>
             </div>
             </div>
