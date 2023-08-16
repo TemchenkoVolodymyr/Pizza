@@ -55,11 +55,10 @@ const CartPage = () => {
           {dataOrderCart ? dataOrderCart?.map(item => <ItemCart totalSum={totalSum} increaseTotal={increaseTotalSum} data={item}></ItemCart> ) : null}
           <div className={style.total}>
             <p>{totalQuantity} Items</p>
-            <p>{totalPrice}</p>
+            <p>$ {totalPrice}</p>
           </div>
         </div>
-
-        <PromoCode></PromoCode>
+        <PromoCode totalPrice={totalPrice}></PromoCode>
       </div>
     </div>
   );

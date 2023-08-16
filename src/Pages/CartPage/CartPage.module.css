@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   margin: 0 20px;
+  padding: 50px;
 }
 .container .cartName {
   display: flex;
@@ -22,7 +23,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin-left: 305px;
+  max-width: 835px;
+  margin-left: 330px;
 }
 .container .total p {
   font-size: 20px;

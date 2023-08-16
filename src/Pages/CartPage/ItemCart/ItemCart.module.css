@@ -1,9 +1,10 @@
 .container {
-  border-top: 1px solid black;
-  width: 60%;
+  border-top: 1px solid #919191;
+  width: 80%;
+  margin: 20px;
 }
 .container .wrapper {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #919191;
   padding: 20px;
 }
 .container .wrapper img {
@@ -43,6 +44,17 @@
   margin: 0 20px;
   font-size: 20px;
   color: #868686;
+  display: flex;
+  align-items: center;
+}
+.container .wrapperUnderList ul li svg {
+  margin-left: 20px;
+  color: #de6908;
+  font-size: 30px;
+}
+.container .wrapperUnderList ul li:hover {
+  cursor: pointer;
+  color: #de6908;
 }
 .container .total {
   display: flex;

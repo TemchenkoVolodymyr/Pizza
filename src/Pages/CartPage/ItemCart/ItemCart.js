@@ -3,6 +3,7 @@ import style from './ItemCart.module.scss'
 import CustomSelect from "./CustomSelect/CustomSelect";
 import {useDispatch} from "react-redux";
 import {changeQuantityCartAC} from "../../../Redux/Cart/cartAC";
+import {RiDeleteBin7Line} from "react-icons/ri";
 
 const ItemCart = (props) => {
 
@@ -48,8 +49,7 @@ const ItemCart = (props) => {
         </div>
         <div className={style.wrapperUnderList}>
           <ul>
-            <li>Remove</li>
-            <li>Edit</li>
+            <li>Remove <RiDeleteBin7Line></RiDeleteBin7Line></li>
           </ul>
         </div>
       </div>
