@@ -1,4 +1,17 @@
 .container{
   border-top: 2px solid black;
   margin-top: 100px;
+  h1{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+  }
+  .cartName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper{
+    display: flex;
+  }
 }

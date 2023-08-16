@@ -2,5 +2,18 @@
   border-top: 2px solid black;
   margin-top: 100px;
 }
+.container h1 {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+.container .cartName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .wrapper {
+  display: flex;
+}
 
 /*# sourceMappingURL=CartPage.module.css.map */
