@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import style from './ItemCart.module.scss'
 import CustomSelect from "./CustomSelect/CustomSelect";
 import {useDispatch} from "react-redux";
-import {changeQuantityCartAC} from "../../../Redux/Cart/cartAC";
+import {cartDataOrderAC, changeQuantityCartAC} from "../../../Redux/Cart/cartAC";
 import {RiDeleteBin7Line} from "react-icons/ri";
 
 const ItemCart = (props) => {
@@ -11,10 +11,13 @@ const ItemCart = (props) => {
   const dispatch = useDispatch()
 
   const [currentItemTotal,setCurrentItemTotal] = useState(0)
-  const {data , increaseTotal,totalSum} = props
+  const {data , increaseTotal,totalSum,setPrice,setQuantity} = props
   const changeCountOfItem = (currentCount) => {
     setCurrentNumOfItems(currentCount)
   }
+  const localDataOrder = JSON.parse(localStorage.getItem('order')) || []
+
+  console.log(localDataOrder)
   useEffect(() =>{
     increaseTotal(totalSum + currentItemTotal)
   },[currentItemTotal])
@@ -22,6 +25,14 @@ const ItemCart = (props) => {
   const changeQuantity = (num) => {
 
     dispatch(changeQuantityCartAC(num,data.id))
+  }
+
+  const deletePizzaCart = (itemId) => {
+   const newArrayOrder = localDataOrder.filter((item) => item.id !== itemId)
+    localStorage.setItem('order',JSON.stringify(newArrayOrder))
+    dispatch(cartDataOrderAC(newArrayOrder))
+    setPrice(0)
+    setQuantity(0)
   }
 
   return (
@@ -49,7 +60,7 @@ const ItemCart = (props) => {
         </div>
         <div className={style.wrapperUnderList}>
           <ul>
-            <li>Remove <RiDeleteBin7Line></RiDeleteBin7Line></li>
+            <li onClick={() => deletePizzaCart(data.id)}>Remove <RiDeleteBin7Line></RiDeleteBin7Line></li>
           </ul>
         </div>
       </div>

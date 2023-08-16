@@ -1,0 +1,25 @@
+.wrapper a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  animation-name: brighten;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.wrapper a p {
+  margin-left: 15px;
+}
+
+@keyframes brighten {
+  0% {
+    color: #ef0000;
+  }
+  50% {
+    color: #868686;
+  }
+  100% {
+    color: #ef0000;
+  }
+}
+
+/*# sourceMappingURL=CartHeader.module.css.map */

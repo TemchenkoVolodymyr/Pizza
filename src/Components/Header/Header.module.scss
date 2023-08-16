@@ -29,6 +29,9 @@
     }
 
   }
+  a{
+    text-decoration: none;
+  }
 }
 
 .header{
@@ -39,4 +42,34 @@
 }
 .logo{
   cursor: pointer;
+}
+.cart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p{
+    margin: 0 5px;
+    font-size: 20px;
+    color: #ef0000;
+    animation-name: brighten;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+  }
+}
+@keyframes brighten {
+  0% {
+    color: #ef0000;
+  }
+  25% {
+    color: #ffffff;
+  }
+  50% {
+    color: #ef0000;
+  }
+  75% {
+    color: #ffffff;
+  }
+  100% {
+    color: #ef0000;
+  }
 }

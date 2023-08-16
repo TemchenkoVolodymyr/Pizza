@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import style from './MenuItems.module.scss'
+import {cartDataOrderAC} from "../Redux/Cart/cartAC";
+import {useDispatch} from "react-redux";
 
 
 
 const MenuItems = (props) => {
   const {loading, menuData} = props
 
-  if (loading) {
-    return <h1>loading...</h1>
-  }
+  const dispatch = useDispatch()
 
   const setOrderToLocalStorage = (image,price,name,id) => {
     const orderData = {
@@ -20,14 +20,28 @@ const MenuItems = (props) => {
       quantity:1,
       id
     }
-    const isLocalStorage = localStorage.getItem('order')
-    if(isLocalStorage) {
-      const parseArray = [JSON.parse(isLocalStorage)]
-      const include = [...parseArray,orderData]
-      localStorage.setItem('order',JSON.stringify(include))
-    }else{
-      localStorage.setItem('order',JSON.stringify(orderData))
-    }
+    const isLocalStorage = JSON.parse(localStorage.getItem('order')) || [];
+    isLocalStorage.push(orderData)
+    localStorage.setItem('order', JSON.stringify(isLocalStorage))
+    dispatch(cartDataOrderAC(isLocalStorage))
+
+
+    // if(isLocalStorage[0] != null){
+    //   console.log(isLocalStorage)
+    //   // const t = JSON.parse(isLocalStorage)
+    //   // parseArray = [JSON.parse(isLocalStorage),orderData]
+    //   isLocalStorage.push(orderData)
+    //   localStorage.setItem('order',JSON.stringify(isLocalStorage))
+    //   dispatch(cartDataOrderAC(isLocalStorage))
+    // }else{
+    //   localStorage.setItem('order',JSON.stringify(orderData))
+    //   dispatch(cartDataOrderAC(orderData))
+    //   console.log(isLocalStorage)
+    // }
+
+
+      // dispatch(cartDataOrderAC(JSON.parse(orderData)))
+    // }
 
   }
 

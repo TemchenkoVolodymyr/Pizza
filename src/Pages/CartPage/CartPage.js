@@ -5,6 +5,7 @@ import ItemCart from "./ItemCart/ItemCart";
 import PromoCode from "./Promocode/PromoCode";
 import {useDispatch, useSelector} from "react-redux";
 import {cartDataOrderAC} from "../../Redux/Cart/cartAC";
+import CartHeader from "./CartHeader/CartHeader";
 
 const CartPage = () => {
   const [totalSum,setTotalSum] = useState(0)
@@ -30,7 +31,7 @@ const CartPage = () => {
   let quantities = 0
   useEffect(() => {
     let sum = 0;
-    dataOrderCart.map(item => {
+    dataOrderCart?.map(item => {
      let total =  item.quantity * item.price
       sum += total
       setTotalPrice(sum.toFixed(1))
@@ -46,13 +47,14 @@ const CartPage = () => {
 
   return (
     <div className={style.container}>
+      <CartHeader></CartHeader>
       <div className={style.cartName}>
         <RiShoppingBasketFill color="red" fontSize={'40px'}></RiShoppingBasketFill>
         <h1>Pizza Delicious Cart</h1>
       </div>
       <div className={style.wrapper}>
         <div className={style.wrapperItems}>
-          {dataOrderCart ? dataOrderCart?.map(item => <ItemCart totalSum={totalSum} increaseTotal={increaseTotalSum} data={item}></ItemCart> ) : null}
+          {dataOrderCart ? dataOrderCart?.map(item => <ItemCart setQuantity={setTotalQuantity} setPrice={setTotalPrice}  totalSum={totalSum} increaseTotal={increaseTotalSum} data={item}></ItemCart> ) : null}
           <div className={style.total}>
             <p>{totalQuantity} Items</p>
             <p>$ {totalPrice}</p>
