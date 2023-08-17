@@ -56,6 +56,15 @@
 
     letter-spacing: 1px;
   }
+  @media (max-width: 767px){
+    margin-bottom: 50px;
+   h1{
+     font-size: 12px;
+   }
+    p{
+      font-size: 10px !important;
+    }
+  }
 }
 .wrapperPrice{
   display: flex;
@@ -98,5 +107,26 @@
     line-height: 30px;
     letter-spacing: 1px;
   }
-
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-top: 50px;
+    img{
+      max-width: 300px;
+    }
+    p{
+      display: none;
+    }
+  }
+  @media (max-width: 767px){
+    h1{
+      font-size: 12px;
+    }
+    img{
+      max-width: 200px;
+    }
+    p{
+      font-size: 10px;
+      padding: 5px;
+      display: none;
+    }
+  }
 }

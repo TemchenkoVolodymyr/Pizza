@@ -30,6 +30,14 @@
       z-index: 3;
       transition: all 0.3s ease 0s;
     }
+    @media (max-width: 767px){
+      width: 30px;
+      height: 20px;
+      margin: 5px;
+      span{
+        top: 10px;
+      }
+    }
   }
   .menu{
     position: fixed;
@@ -49,6 +57,9 @@
         padding: 10px;
         font-size: 20px;
         cursor: pointer;
+        @media (max-width: 767px){
+          font-size: 12px;
+        }
       }
     }
     @media (min-width: 768px) and (max-width: 1023px) {
@@ -70,6 +81,14 @@
     }
     .menu{
       top:0;
+    }
+    @media (max-width: 767px){
+      &:before {
+        top: 10px;
+      }
+      &:after{
+        bottom: 10px;
+      }
     }
   }
 

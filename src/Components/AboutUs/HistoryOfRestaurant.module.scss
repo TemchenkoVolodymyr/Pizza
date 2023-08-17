@@ -7,15 +7,23 @@
   }
 
   @media (min-width: 1024px) and (max-width: 1380px) {
+    margin-left: 0;
     img {
       max-width: 400px;
       height: 325px;
     }
   }
   @media (min-width: 768px) and (max-width: 1023px) {
+    margin-left: 0;
     width: 100%;
     img {
       width: 100%;
+    }
+  }
+  @media (max-width: 767px){
+    margin-left: 0;
+    img{
+      max-width: 100%;
     }
   }
 }
@@ -26,6 +34,9 @@
   @media (min-width: 768px) and (max-width: 1023px) {
     display: block;
     padding: 5px;
+  }
+  @media (max-width: 767px){
+    display: block;
   }
 }
 
@@ -58,5 +69,25 @@
 
   span {
     color: orange;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h2{
+      font-size: 15px;
+    }
+    p{
+      font-size: 12px;
+      padding: 15px;
+    }
+  }
+  @media (max-width: 767px){
+    h2{
+      margin-top: 20px;
+      font-size: 10px;
+    }
+    p{
+      font-size: 10px;
+      line-height: 15px;
+      padding: 5px;
+    }
   }
 }

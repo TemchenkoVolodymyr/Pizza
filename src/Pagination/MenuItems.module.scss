@@ -33,7 +33,25 @@
 
       }
     }
+    @media (max-width: 767px){
+      height: 150px;
+      box-shadow: inset 100vh 100vh rgba(0, 0, 0, 0.64);
+      //max-width: 300px;
+      width: 125px;
+      .descriptionItem {
+        visibility: visible;
+        .name{
+          font-size: 10px;
+        }
+        .description{
+          display: none;
+        }
 
+        //width: 100%;
+        height: 100%;
+
+      }
+    }
   }
 
   .descriptionItem {
@@ -77,6 +95,11 @@
         font-size: 15px;
       }
     }
+    @media (max-width: 767px){
+      .name{
+        max-width: 100px;
+      }
+    }
   }
 }
 
@@ -88,7 +111,11 @@
   margin: 0 auto;
   //box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
-
+  @media (max-width: 767px){
+    max-width: 200px;
+    margin: 0 10px;
+    //max-height: 200px;
+  }
 }
 
 .wrapperPrice {
@@ -106,7 +133,7 @@
     padding: 15px 20px;
     cursor: pointer;
     font-size: 20px;
-    //transition: all 0.5s;
+    transition: all 0.5s;
     &:hover {
       //padding: 15px 30px;
       //border: 1px solid white;
@@ -118,5 +145,20 @@
 
   @media (min-width: 768px) and (max-width: 1023px) {
    height: 110px;
+  }
+  @media (max-width: 767px){
+    display: flex;
+    button{
+      font-size: 10px;
+      padding: 5px;
+      //display: block;
+      background-color: #de6908;
+    }
+    .price{
+      span{
+        font-size: 10px !important;
+      }
+
+    }
   }
 }

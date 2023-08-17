@@ -1,7 +1,6 @@
 import React from "react";
 import style from './OtherProduct.module.scss'
 import bg from '../../assets/about.jpg'
-import test from '../../assets/pizzaNoBg.png'
 
 const OtherProduct = (props) => {
 

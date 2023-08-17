@@ -6,6 +6,10 @@
     width: 600px;
     border-bottom: 1px solid #de6908;
     margin-bottom: 30px;
+    @media (max-width: 767px){
+      width: auto;
+      padding: 5px;
+    }
 
     input {
       background-color: transparent;

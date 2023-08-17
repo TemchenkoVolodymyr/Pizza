@@ -17,7 +17,6 @@ const ItemCart = (props) => {
   }
   const localDataOrder = JSON.parse(localStorage.getItem('order')) || []
 
-  console.log(localDataOrder)
   useEffect(() =>{
     increaseTotal(totalSum + currentItemTotal)
   },[currentItemTotal])
@@ -40,7 +39,7 @@ const ItemCart = (props) => {
       <div className={style.wrapper}>
         <div className={style.wrapperProduct}>
           <img alt='image' src={`pizza/${data?.image}`}/>
-          <div>
+          <div className={style.wrapperDesc}>
             <p className={style.name}>{data?.name}</p>
             <p className={style.ingredients}>Ingredients : {data?.ingredients}</p>
             <p className={style.size}>Size : {data?.size}</p>
@@ -64,10 +63,6 @@ const ItemCart = (props) => {
           </ul>
         </div>
       </div>
-      {/*<div className={style.total}>*/}
-      {/*  <p>{currentNumOfItems} Items</p>*/}
-      {/*  <p>$ {data?.price * currentNumOfItems}</p>*/}
-      {/*</div>*/}
     </div>
   );
 };

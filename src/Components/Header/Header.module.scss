@@ -83,6 +83,33 @@
       }
     }
   }
+  @media (max-width: 767px) {
+    .wrapperList{
+      display: none;
+    }
+    .hamburger {
+      display: block;
+      margin-right: 0;
+    }
+    .headerBurger{
+      width: 20px;
+      height: 15px;
+      span{
+        top:10px;
+      }
+    }
+    .logo{
+      display: none;
+    }
+    .cart{
+      img{
+        max-width: 30px;
+      }
+      p{
+        font-size: 10px;
+      }
+    }
+  }
 }
 
 .header {

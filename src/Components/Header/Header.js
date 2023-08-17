@@ -49,7 +49,6 @@ const Header = () => {
           <div className={style.hamburger}>
             <Hamburger></Hamburger>
           </div>
-
           <NavLink to={'cart'}>
           <div className={style.cart}>
             <img src={cart} alt={'cart'}/>

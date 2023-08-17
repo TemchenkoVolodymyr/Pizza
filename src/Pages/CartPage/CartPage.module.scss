@@ -1,37 +1,80 @@
-.container{
+.container {
   //border-top: 2px solid black;
-margin: 20px;
-  h1{
+  margin: 20px;
+
+  h1 {
     display: flex;
     align-items: center;
     margin: 0 20px;
     padding: 50px;
   }
-  .cartName{
+
+  .cartName {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (min-width: 768px) and (max-width: 1023px) {
+      h1 {
+        font-size: 12px;
+      }
+      svg {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 12px;
+        padding: 20px 0;
+      }
+      svg{
+        font-size: 20px;
+      }
+    }
   }
-  .wrapper{
+
+  .wrapper {
     display: flex;
+    @media (max-width: 767px) {
+      display: block;
+    }
   }
-  .wrapperItems{
+
+  .wrapperItems {
     width: 100%;
+    @media (min-width: 768px) and (max-width: 1023px) {
+      margin-right: 20px;
+    }
+    @media (max-width: 767px) {
+      //width: 50%;
+    }
   }
+
   .total {
-    //max-width: 45%;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     max-width: 835px;
     margin-left: 330px;
-    p{
+
+    p {
       font-size: 20px;
       font-weight: bold;
     }
 
     p {
       margin: 0 20px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      margin-left: 0;
+      p {
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+    @media (min-width: 1024px) and (max-width: 1250px) {
+      margin-right: 77px;
+      margin-left: 0;
     }
   }
 }

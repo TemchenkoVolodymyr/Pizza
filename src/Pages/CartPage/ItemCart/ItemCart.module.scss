@@ -14,6 +14,7 @@
     .wrapperProduct {
       display: flex;
       justify-content: space-between;
+
       .ingredients {
         color: #868686;
         letter-spacing: 1px;
@@ -26,13 +27,52 @@
         letter-spacing: 1px;
         font-size: 17px;
       }
-      .totalCurrentPizzaPrice{
-        .totalPrice{
+
+      .totalCurrentPizzaPrice {
+        .totalPrice {
           font-size: 20px;
           font-weight: bolder;
         }
+
+        @media (min-width: 1024px) and (max-width: 1250px) {
+          .totalPrice {
+            font-size: 14px;
+          }
+        }
       }
+
+      @media (min-width: 1024px) and (max-width: 1250px) {
+        .wrapperDesc {
+          p {
+            font-size: 12px;
+          }
+        }
+        div {
+          padding: 10px;
+        }
+        .name {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 767px) {
+        display: block;
+        img {
+          max-width: 50px;
+          max-height: 50px;
+          border-radius: 50%;
+        }
+        .name {
+          font-size: 12px;
+        }
+        .ingredients {
+          font-size: 12px;
+        }
+        .size{
+          font-size: 12px;
+        }
+        }
     }
+
     .name {
       font-size: 22px;
       font-weight: lighter;
@@ -53,14 +93,16 @@
         color: #868686;
         display: flex;
         align-items: center;
-        svg{
+
+        svg {
           margin-left: 20px;
           color: #de6908;
           font-size: 30px;
         }
-        &:hover{
+
+        &:hover {
           cursor: pointer;
-          color:#de6908;
+          color: #de6908;
         }
       }
     }
@@ -71,8 +113,9 @@
     justify-content: space-between;
     margin-top: 20px;
     margin-left: 305px;
-    p{
-     font-size: 20px;
+
+    p {
+      font-size: 20px;
       font-weight: bold;
     }
 
@@ -80,10 +123,83 @@
       margin: 0 20px;
     }
   }
-  .wrapperCount{
-.price{
-  font-size: 20px;
-  font-weight: bolder;
-}
+
+  .wrapperCount {
+    .price {
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1250px) {
+      .price {
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 767px) {
+     margin: 10px 0;
+
+     .name{
+       font-size: 15px !important;
+     }
+      .price{
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: auto;
+    margin: 0;
+    .wrapper {
+      img {
+        max-width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .name {
+        font-size: 12px;
+      }
+
+      .ingredients {
+        font-size: 12px;
+      }
+
+      .wrapperProduct {
+        .wrapperDesc {
+          p {
+            font-size: 12px !important;
+          }
+        }
+
+        .wrapperCount {
+          p {
+            font-size: 12px;
+          }
+
+        }
+
+        .totalCurrentPizzaPrice {
+          p {
+            font-size: 12px !important;
+          }
+        }
+      }
+
+      .wrapperUnderList {
+        ul {
+
+          li {
+            font-size: 12px;
+
+            svg {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+
   }
 }

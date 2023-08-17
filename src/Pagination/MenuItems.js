@@ -38,8 +38,6 @@ const MenuItems = (props) => {
               <div className={style.wrapperPrice}>
 
                 <p className={style.price}><span>$ {item.price}</span></p>
-
-
                 <button onClick={() => setOrderToLocalStorage(item.image,item.price,item.name,item._id)}>Order</button>
 
                 </div>

@@ -12,6 +12,14 @@
       display: none;
     }
   }
+  @media (max-width: 767px){
+    .map{
+      display: none;
+    }
+    .form{
+      width: 100%;
+    }
+  }
 
 }
 

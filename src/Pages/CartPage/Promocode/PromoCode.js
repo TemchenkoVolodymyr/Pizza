@@ -6,8 +6,10 @@ const PromoCode = ({totalPrice}) => {
   return (
     <div className={style.container}>
       <div className={style.promoCode}>
+        <div>
         <label>ENTER PROMO CODE</label>
         <input placeholder={'Promo Code'}/>
+        </div>
         <button>SUBMIT</button>
       </div>
       <div>
