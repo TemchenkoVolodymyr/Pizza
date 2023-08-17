@@ -1,7 +1,6 @@
 import React from "react";
 import style from './OtherProduct.module.scss'
 import bg from '../../assets/about.jpg'
-import test from '../../assets/pizzaNoBg.png'
 
 const OtherProduct = (props) => {
 
@@ -44,3 +43,15 @@ const OtherProduct = (props) => {
   )
 }
 export default OtherProduct
+
+
+// const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+//
+// useEffect(() => {
+//   function handleResize() {
+//     setWindowWidth(window.innerWidth);
+//   }
+//   window.addEventListener('resize', handleResize);
+//
+//   return () => window.removeEventListener('resize', handleResize);
+// }, []);

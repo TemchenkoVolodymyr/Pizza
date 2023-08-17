@@ -27,9 +27,9 @@ const Slide = (props) => {
 
           <div className={style.wrapperHome}>
             <div className={style.homeMessage}>
-              <h2 className={style.welcome}>{dataSlider[currentIndex].title}</h2>
-              <h1>{dataSlider[currentIndex].header}</h1>
-              <p className={style.description}>{dataSlider[currentIndex].description}</p>
+              <h2 className={style.welcome}>{dataSlider[currentIndex]?.title}</h2>
+              <h1>{dataSlider[currentIndex]?.header}</h1>
+              <p className={style.description}>{dataSlider[currentIndex]?.description}</p>
             </div>
             <div className={style.btns}>
               <Link to={'menu'} smooth={true} duration={500}>

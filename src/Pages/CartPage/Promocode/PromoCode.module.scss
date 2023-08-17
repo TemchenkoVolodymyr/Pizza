@@ -1,0 +1,155 @@
+.container {
+  table {
+    margin-top: 50px;
+    width: 100%;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 27px;
+      color: #868686;
+      letter-spacing: 1px;
+      font-size: 17px;
+
+      td {
+        padding: 10px 0;
+      }
+
+    }
+
+    .total {
+      color: black !important;
+      font-size: 25px;
+      font-weight: bolder;
+      letter-spacing: 1px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    table {
+      tr {
+        font-size: 12px;
+      }
+
+      .total {
+        font-size: 12px;
+      }
+    }
+
+  }
+  @media (max-width: 767px) {
+    //display: none;
+    table {
+      tr {
+        font-size: 10px;
+      }
+
+      td {
+        font-size: 10px;
+      }
+    }
+  }
+
+}
+
+.promoCode {
+  input {
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  button {
+    background-color: black;
+    color: #fdfdfd;
+    padding: 17px;
+    font-size: 20px;
+    width: 120px;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      font-size: 10px;
+      padding: 17px;
+      width: 80px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    text-align: left;
+    input {
+      font-size: 10px;
+    }
+  }
+  @media (max-width: 767px) {
+    label {
+      font-size: 10px;
+    }
+    input {
+      font-size: 10px;
+      width: 70px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      padding: 15px;
+      font-size: 10px;
+      width: 70px;
+    }
+  }
+
+}
+
+.checkoutBtnWrapper {
+  text-align: center;
+
+  p {
+    margin: 30px 0;
+    font-size: 18px;
+    color: #868686;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    span {
+      color: #ef0000;
+    }
+  }
+
+  button {
+    background-color: #911919;
+    color: #000000;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    width: 300px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #730505;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      width: auto;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+
+    p {
+      font-size: 12px;
+    }
+    button {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 767px) {
+    button {
+      font-size: 10px;
+      width: 100%;
+    }
+  }
+}
