@@ -24,28 +24,9 @@ const MenuItems = (props) => {
     isLocalStorage.push(orderData)
     localStorage.setItem('order', JSON.stringify(isLocalStorage))
     dispatch(cartDataOrderAC(isLocalStorage))
-
-
-    // if(isLocalStorage[0] != null){
-    //   console.log(isLocalStorage)
-    //   // const t = JSON.parse(isLocalStorage)
-    //   // parseArray = [JSON.parse(isLocalStorage),orderData]
-    //   isLocalStorage.push(orderData)
-    //   localStorage.setItem('order',JSON.stringify(isLocalStorage))
-    //   dispatch(cartDataOrderAC(isLocalStorage))
-    // }else{
-    //   localStorage.setItem('order',JSON.stringify(orderData))
-    //   dispatch(cartDataOrderAC(orderData))
-    //   console.log(isLocalStorage)
-    // }
-
-
-      // dispatch(cartDataOrderAC(JSON.parse(orderData)))
-    // }
-
   }
 
-  console.log(menuData)
+
     return (
       <>
         <div className={style.itemsMenu}>
@@ -55,9 +36,13 @@ const MenuItems = (props) => {
               <p className={style.name}>{item.name}</p>
               <p className={style.description}>{item.description}</p>
               <div className={style.wrapperPrice}>
+
                 <p className={style.price}><span>$ {item.price}</span></p>
+
+
                 <button onClick={() => setOrderToLocalStorage(item.image,item.price,item.name,item._id)}>Order</button>
-              </div>
+
+                </div>
             </div>
             </div>
           </div>)}

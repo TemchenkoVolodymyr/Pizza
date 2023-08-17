@@ -5,6 +5,7 @@ import {Link} from "react-scroll";
 import cart from '../../assets/cart.png'
 import {NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
+import Hamburger from "../../HamburgerMenu/Hamburger";
 
 const Header = () => {
 
@@ -45,6 +46,10 @@ const Header = () => {
             </ul>
 
           </div>
+          <div className={style.hamburger}>
+            <Hamburger></Hamburger>
+          </div>
+
           <NavLink to={'cart'}>
           <div className={style.cart}>
             <img src={cart} alt={'cart'}/>

@@ -1,53 +1,110 @@
-.container{
+.container {
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  color:#868686;
-  img{
+  color: #868686;
+
+  img {
     max-width: 200px;
   }
-  .wrapperList{
+
+  .wrapperList {
     display: flex;
     align-items: center;
     justify-content: center;
-    ul{
+
+    ul {
       display: flex;
       color: #ffffff;
       font-weight: bold;
 
-      li{
+      li {
         list-style: none;
         padding: 5px;
         margin: 0 25px;
-        &:hover{
-          cursor: pointer;
-          color:#ef0000;
 
-        };
+        &:hover {
+          cursor: pointer;
+          color: #ef0000;
+
+        }
+      ;
       }
     }
 
   }
-  a{
+  .hamburger{
+    display: none;
+    margin-right: 500px;
+  }
+
+  a {
     text-decoration: none;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1380px) {
+    align-items: center;
+    padding:  5px 10px;
+    .wrapperList{
+      display: none;
+    }
+    .hamburger{
+      display: block;
+
+    }
+    img{
+      max-width: 80px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 0 15px;
+    align-items: center;
+    .wrapperList{
+      display: none;
+    }
+    .hamburger{
+      display: block;
+      .headerBurger{
+        width: 30px;
+        height: 20px;
+        span{
+          top:10px;
+        }
+      }
+
+    }
+    .logo{
+      display: none;
+    }
+    .cart{
+      img{
+        max-width: 50px;
+      }
+    }
   }
 }
 
-.header{
+.header {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   width: 100%;
+  @media (min-width: 1024px) and (max-width: 1380px) {
+    //height: 100px;
+  }
 }
-.logo{
+
+.logo {
   cursor: pointer;
 }
-.cart{
+
+.cart {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  p{
+
+  p {
     margin: 0 5px;
     font-size: 20px;
     color: #ef0000;
@@ -56,6 +113,7 @@
     animation-iteration-count: infinite;
   }
 }
+
 @keyframes brighten {
   0% {
     color: #ef0000;

@@ -25,6 +25,26 @@
       h3{
         font-size: 16px;
       }
+      @media (min-width: 1024px) and (max-width: 1380px){
+        width: 222px;
+        margin: 0;
+        p{
+          font-size: 15px;
+        }
+        h3{
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+        }
+        a{
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+        }
+      }
+    }
+    @media (min-width: 1024px) and (max-width: 1380px){
+      align-items: baseline;
     }
   }
   .social{
@@ -39,5 +59,22 @@
       font-size: 30px;
       margin: 0 20px;
     }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+.info{
+  align-items: baseline;
+  font-size: 12px;
+  h3{
+    font-size: 12px !important;
+  }
+  div{
+    max-width: 150px;
+    margin: 0;
+    a{
+      font-size: 12px;
+    }
+  }
+
+}
   }
 }

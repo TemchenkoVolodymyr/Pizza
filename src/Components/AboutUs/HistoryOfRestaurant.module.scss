@@ -1,20 +1,32 @@
 .wrapperImage {
-margin-left: 10px;
+  margin-left: 10px;
+
   img {
     max-width: 800px;
     //height: 100%;
   }
-  @media (min-width: 1024px) and (max-width: 1380px){
-img{
-  max-width: 400px;
-  height: 325px;
-}
+
+  @media (min-width: 1024px) and (max-width: 1380px) {
+    img {
+      max-width: 400px;
+      height: 325px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 }
 
 .container {
   display: flex;
   padding-bottom: 20px;
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: block;
+    padding: 5px;
+  }
 }
 
 .about {
@@ -24,14 +36,14 @@ img{
   justify-content: center;
   text-align: left;
   margin: 0 auto;
-  @media (min-width: 1024px) and (max-width: 1380px){
-   padding: 30px;
+  @media (min-width: 1024px) and (max-width: 1380px) {
+    padding: 30px;
     text-align: center;
   }
 
   p {
     max-width: 800px;
-    color:#cecece;
+    color: #cecece;
     letter-spacing: 1px;
     margin-top: 50px;
     font-size: 16px;
@@ -41,9 +53,10 @@ img{
   }
 
   h2 {
-    color:#fdfdfd;
+    color: #fdfdfd;
   }
-  span{
-    color:orange;
+
+  span {
+    color: orange;
   }
 }

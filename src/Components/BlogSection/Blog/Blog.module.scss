@@ -12,6 +12,26 @@
     color:#fdfdfd;
     margin: 20px 0;
   }
+  @media (min-width: 1024px) and (max-width: 1380px) {
+    img{
+      width: 200px;
+      height: 200px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    img{
+      width: 100px;
+      height: 100px;
+    }
+    .description{
+      font-size: 12px;
+    }
+    margin: 0;
+    padding: 14px;
+  }
+  p{
+    max-width: 100%;
+  }
 }
 .wrapperDate{
   display: flex;

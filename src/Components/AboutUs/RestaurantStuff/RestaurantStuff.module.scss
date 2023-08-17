@@ -37,6 +37,12 @@
   div{
     text-align: center;
   }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    svg{
+      padding: 0;
+      font-size: 30px !important;
+    }
+  }
 }
 .number{
   color:#ef0000;
@@ -48,4 +54,12 @@
   color:#cecece;
   font-size: 20px;
   font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .text{
+    font-size: 15px;
+  }
+  .number{
+    font-size: 20px;
+  }
 }
