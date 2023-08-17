@@ -1,5 +1,4 @@
 .container{
-
 }
 .containerModal{
   border: 1px solid black;
@@ -17,9 +16,15 @@
     justify-content: space-between;
     margin-bottom: 20px;
     font-size: 13px;
+    @media (max-width: 767px) {
+      font-size: 10px;
+    }
   }
   .comment{
     font-size: 18px;
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
   }
 }
 .test{
@@ -35,5 +40,14 @@
     font-size: 30px;
     font-weight: bolder;
     color:#ef0000;
+  }
+  @media (max-width: 767px) {
+img{
+  max-width: 150px;
+}
+  p{
+    font-size: 12px;
+  }
+
   }
 }
