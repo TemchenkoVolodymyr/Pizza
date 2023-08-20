@@ -18,6 +18,9 @@ const Menu = () => {
   const [dataPerPage,setDataPerPage] = useState(6)
   const [loading,setLoading] = useState(false)
 
+  const [currentPagePrice,setCurrentPagePrice] = useState(1)
+  const [dataPerPagePrice,setDataPerPagePrice] = useState(4)
+
   const [currentProduct,setCurrentProduct] = useState(null)
 
   useEffect(() => {
@@ -31,25 +34,31 @@ const Menu = () => {
   },[dataOfPizzas])
 
   const getPizza = () => {
-    return axios.get(`http://localhost:3000/api/v1/pizza`).then(res => setCurrentProduct(res.data.data.result.splice(0,3)))
+    return axios.get(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/pizza`).then(res => setCurrentProduct(res.data.data.result.splice(0,3)))
   }
   const getDrinks = () => {
-    return axios.get(`http://localhost:3000/api/v1/drink`).then(res => setCurrentProduct(res.data.data.result))
+    return axios.get(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/drink`).then(res => setCurrentProduct(res.data.data.result))
   }
   const getBurgers = () => {
-    return axios.get(`http://localhost:3000/api/v1/burger`).then(res => setCurrentProduct(res.data.data.result))
+    return axios.get(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/burger`).then(res => setCurrentProduct(res.data.data.result))
   }
   const getPastas = () => {
-    return axios.get(`http://localhost:3000/api/v1/pasta`).then(res => setCurrentProduct(res.data.data.result))
+    return axios.get(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/pasta`).then(res => setCurrentProduct(res.data.data.result))
   }
-
+// Menu
   const indexOfLastMenuItem = currentPage * dataPerPage;
-
   const indexOfFirstMenuItem = indexOfLastMenuItem - dataPerPage
-
   const currentMenu = dataOfPizzas.slice(indexOfFirstMenuItem,indexOfLastMenuItem)
 
+
+  //Price
+  const indexOfLastPriceItem = currentPagePrice * dataPerPagePrice
+  const indexOfFirstPriceItem = indexOfLastPriceItem - dataPerPagePrice
+  const currentPrice = dataOfPizzas.slice(indexOfFirstPriceItem,indexOfLastPriceItem)
+
   const paginate = (numberPage) => setCurrentPage(numberPage)
+
+  const paginatePrice = (num) => setCurrentPagePrice(num)
 
   return (
     <>
@@ -71,7 +80,7 @@ const Menu = () => {
 
         </div>
         </section>
-        <Price data={dataOfPizzas}></Price>
+        <Price paginate={paginatePrice} data={currentPrice} dataPerPage={dataPerPagePrice} totalItems={dataOfPizzas.length}></Price>
 
         <OtherProduct getPastas={getPastas} getBurgers={getBurgers} getDrinks={getDrinks} currentProduct={currentProduct} getStartProduct={getPizza}></OtherProduct>
       </div>

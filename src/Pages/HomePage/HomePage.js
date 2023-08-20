@@ -14,7 +14,7 @@ import FooterContact from "../../Components/FooterContact/FooterContact";
 
 
 export const getPizzas = (dispatch) => {
-  axios.get(`http://localhost:3000/api/v1/pizza`).then(res => dispatch(homePageAC(res.data.data.result)))
+  axios.get(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/pizza`).then(res => dispatch(homePageAC(res.data.data.result)))
 }
 
 const HomePage = () => {

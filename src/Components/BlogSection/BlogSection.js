@@ -30,10 +30,10 @@ const BlogSection = () => {
 
    const getBlogComment = (value, actionCreator) => {
 
-    return axios.get(`http://localhost:3000/api/v1/${value}`).then(res => dispatch(actionCreator(res.data.data.result)))
+    return axios.get(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/${value}`).then(res => dispatch(actionCreator(res.data.data.result)))
   }
    const addCommentBlog = (value, comment, action) => {
-    axios.post(`http://localhost:3000/api/v1/${value}`, {
+    axios.post(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/${value}`, {
 
       author: "Quest",
       comment: comment,

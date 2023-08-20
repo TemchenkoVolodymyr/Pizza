@@ -39,7 +39,7 @@ const ModalAP = (props) => {
   const createNewPizza = (e) => {
     e.preventDefault()
 
-    axios.post(`http://localhost:3000/api/v1/pizza`, {
+    axios.post(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/pizza`, {
       name,
       image,
       description,

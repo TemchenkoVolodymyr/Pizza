@@ -57,29 +57,18 @@ const dispatch = useDispatch()
           <li>Mixed</li>
         </ul>
       </div>
-        <div className={style.wrapper}>
-          <h1>ABOUT US</h1>
-          <p className={style.description}>From that day on, the couple became regulars at the restaurant. They would often bring their friends and family to share in the experience. The restaurant became more than just a place to eat; it was a place where memories were made.</p>
-        </div>
+        {/*<div className={style.wrapper}>*/}
+        {/*  <h1>ABOUT US</h1>*/}
+        {/*  <p className={style.description}>From that day on, the couple became regulars at the restaurant. They would often bring their friends and family to share in the experience. The restaurant became more than just a place to eat; it was a place where memories were made.</p>*/}
+        {/*</div>*/}
         <div className={style.questions}>
-          <h1>HAVE A QUESTIONS?</h1>
+          <h1>HAVE ANY QUESTIONS?</h1>
           <p><BiMapPin></BiMapPin>Via della Sibilla, 42, Tivoli RM</p>
           <p><BsTelephoneForward></BsTelephoneForward><a href="https://wa.me/3272885492" target="_blank" rel="noopener noreferrer">+39 06 9209 9110</a></p>
           <p><AiOutlineMail></AiOutlineMail><a href={'#'}>delicious@gmail.fun</a></p>
         </div>
-      {/*<div className={style.wrapper}>*/}
-
-        {/*<div className={style.questions}>*/}
-        {/*  <h1>HAVE A QUESTIONS?</h1>*/}
-        {/*  <p><BiMapPin></BiMapPin>Via della Sibilla, 42, Tivoli RM</p>*/}
-        {/*  <p><BsTelephoneForward></BsTelephoneForward><a href="https://wa.me/3272885492" target="_blank" rel="noopener noreferrer">+39 06 9209 9110</a></p>*/}
-        {/*  <p><AiOutlineMail></AiOutlineMail><a href={'#'}>delicious@gmail.fun</a></p>*/}
-        {/*</div>*/}
-
-      {/*</div>*/}
       </div>
     </div>
-      {/*<p>Copyright</p>*/}
     </>
   );
 };

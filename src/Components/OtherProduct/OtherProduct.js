@@ -32,7 +32,7 @@ const dispatch = useDispatch()
           <img src={bg} alt={'image'}/>
         </div>
 
-        <div>
+        <div className={style.wrapperLists}>
           <div className={style.lists}>
             <ul>
               <li onClick={getStartProduct}>Pizza</li>

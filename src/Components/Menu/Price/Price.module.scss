@@ -72,3 +72,33 @@ p{
     line-height: 30px;
   }
 }
+.wrapperPricePaginator{
+  .items{
+    display: flex;
+    li{
+      padding:10px;
+      font-size: 30px;
+      list-style: none;
+      color:#fdfdfd;
+      background-color: black;
+      margin: 5px;
+      &:hover{
+        background-color: #fdfdfd;
+        color:#000000;
+        cursor: pointer;
+      }
+      @media (max-width: 767px){
+        margin-bottom: 50px;
+
+          padding: 5px;
+          font-size: 15px;
+          border-radius: 50%;
+
+      }
+    }
+  }
+}
+.active{
+  background-color: #fdfdfd !important;
+  color:#000000 !important;
+}

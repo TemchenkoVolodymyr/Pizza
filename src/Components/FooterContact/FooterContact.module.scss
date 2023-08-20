@@ -14,12 +14,17 @@
     @media (max-width: 767px){
       font-size: 12px;
       margin-bottom: 20px;
+
     }
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     margin: 20px 0;
     font-size: 12px;
   }
+
+  @media (max-width: 767px){
+  margin: 0;
+}
 }
   .wrapper {
     text-align: left;
@@ -52,6 +57,12 @@
         letter-spacing: 1px;
       }
     }
+    @media (max-width: 767px){
+      width: 100%;
+      .header{
+        margin-left: 0;
+      }
+    }
   }
 
   .blog {
@@ -82,15 +93,20 @@
 
 .wrapperBlogs {
   display: flex;
-  margin: 5px;
+  //margin: 5px;
   h3{
     max-width: 200px;
     letter-spacing: 1px;
     line-height: 30px;
     @media (max-width: 767px){
      line-height: 20px;
+      width: 100%;
+      max-width: 115px;
     }
 
+  }
+  @media (max-width: 767px){
+    justify-content: space-between;
   }
 
 }

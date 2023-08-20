@@ -12,7 +12,7 @@ const ContactUs = () => {
   const submitForm = (e) => {
     e.preventDefault()
 
-    axios.post(`http://localhost:3000/api/v1/form`, {
+    axios.post(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/form`, {
       name: dataForm.contact.values.firstName,
       message: dataForm.contact.values.message,
       email: dataForm.contact.values.email,

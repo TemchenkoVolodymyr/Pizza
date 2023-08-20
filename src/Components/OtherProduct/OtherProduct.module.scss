@@ -30,6 +30,7 @@
     }
     @media (max-width: 767px) {
       margin-top: 50px;
+      justify-content: center;
       ul{
         padding: 0;
         li{
@@ -38,6 +39,9 @@
         }
       }
     }
+  }
+  .wrapperLists{
+    width: 100%;
   }
 }
 
