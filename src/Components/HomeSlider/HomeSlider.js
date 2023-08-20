@@ -1,9 +1,9 @@
 import React from "react";
 import style from './HomeSlider.module.scss'
 import Slide from "./Slide";
-import sliderOne from '../../assets/tt.png'
-import sliderTwo from '../../assets/bg3Slider.png'
-import sliderThree from '../../assets/qeqw.png'
+import sliderOne from '../../assets/firstHomeItemSlider.png'
+import sliderTwo from '../../assets/secondHomeItemSlider.png'
+import sliderThree from '../../assets/thirdHomeItemSlider.png'
 
 const HomeSlider = () => {
 
