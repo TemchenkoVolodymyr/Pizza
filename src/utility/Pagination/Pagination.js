@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import style from './Pagination.module.scss'
-import ModalAP from "../AdminPanel/ModalAP";
+import ModalAP from "../../AdminPanel/ModalAP";
 
 const Pagination = (props) => {
   const {dataPerPage, totalItems, paginate} = props

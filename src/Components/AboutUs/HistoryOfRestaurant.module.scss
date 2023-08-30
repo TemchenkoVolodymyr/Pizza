@@ -41,6 +41,7 @@
 }
 
 .about {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,5 +92,8 @@
       line-height: 15px;
       padding: 5px;
     }
+  }
+  section{
+    text-align: center;
   }
 }

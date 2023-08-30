@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import style from './MenuItems.module.scss'
-import {cartDataOrderAC} from "../Redux/Cart/cartAC";
+import {cartDataOrderAC} from "../../Redux/Cart/cartAC";
 import {useDispatch} from "react-redux";
 
 

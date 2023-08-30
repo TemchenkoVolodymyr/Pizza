@@ -4,8 +4,8 @@ import gb from '../../assets/bg_4.jpg'
 import axios from "axios";
 import {useSelector} from "react-redux";
 import pizzaImage from '../../assets/pizza-1.jpg'
-import MenuItems from "../../Pagination/MenuItems";
-import Pagination from "../../Pagination/Pagination";
+import MenuItems from "../../utility/Pagination/MenuItems";
+import Pagination from "../../utility/Pagination/Pagination";
 import romb from '../../assets/romb.png'
 import Price from "./Price/Price";
 import OtherProduct from "../OtherProduct/OtherProduct";

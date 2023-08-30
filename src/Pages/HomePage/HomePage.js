@@ -8,7 +8,7 @@ import OtherProduct from "../../Components/OtherProduct/OtherProduct";
 import AboutUs from "../../Components/AboutUs/AboutUs";
 import HistoryOfRestaurant from "../../Components/AboutUs/HistoryOfRestaurant";
 import BlogSection from "../../Components/BlogSection/BlogSection";
-import RestaurantStuff from "../../Components/AboutUs/RestaurantStuff/RestaurantStuff";
+import RestaurantStuff from "../../Components/AboutUs/RestaurantStuff/RestaurantStaff/RestaurantStuff";
 import ContactUs from "../../Components/Contact/ContactUs";
 import FooterContact from "../../Components/FooterContact/FooterContact";
 

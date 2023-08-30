@@ -16,7 +16,7 @@
   background-size: cover;
   background-position: bottom;
 }
-.underBg .test {
+.underBg .wrapperUnderBg {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.68);
