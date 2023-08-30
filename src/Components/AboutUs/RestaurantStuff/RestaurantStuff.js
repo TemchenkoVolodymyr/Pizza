@@ -49,7 +49,6 @@ const RestaurantStuff = () => {
             </div>
           </div>
           <div>
-            {/*<SiCodechef></SiCodechef>*/}
           </div>
         </div>
       </div>
