@@ -3,6 +3,8 @@ import style from './Modal.module.scss'
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import CommentSection from "./CommentSection/CommentSection";
+import {blogRequest} from "../../ApiRequest/ApiRequest";
+import {useDispatch} from "react-redux";
 
 
 const styleModal = {
@@ -34,13 +36,16 @@ const styleModalPhone = {
 
 const CustomModal = (props) => {
 
+  const dispatch = useDispatch()
 
-  const {handleClose, modal, data, callback, comment, changeComment, action, value, image, title} = props
+  const {handleClose, modal, data, comment, changeComment, action, value, image, title} = props
+
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const addNewComment = () => {
-    callback(value, comment, action)
+    dispatch(blogRequest.createComment(value, comment, action))
     changeComment("")
   }
+
   useEffect(() => {
     function handleResize() {
       setScreenWidth(window.innerWidth);
@@ -50,6 +55,7 @@ const CustomModal = (props) => {
     return () => window.removeEventListener('resize', handleResize);
 
   }, [])
+
   return (
     <>
       <div className={style.container}>
@@ -60,13 +66,19 @@ const CustomModal = (props) => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={screenWidth > 768 ? styleModal : styleModalPhone}>
-            <div className={style.test}>
-              <div className={style.wrapperHeader}>
-                <img src={image}/>
-                <p>{title}</p>
-              </div>
+            <div>
+
+              <header>
+                <div className={style.wrapperHeader}>
+                  <img src={image} alt={'image-party'}/>
+                  <p>{title}</p>
+                </div>
+              </header>
+
               <div className={style.containerModal}>
-                {data && data.map(item => <div className={style.wrapper}>
+
+                <section>
+                {data && data.map((item, index) => <div key={index} className={style.wrapper}>
                     <div>
                       <p>{item.author}</p>
                       <p>{item.date}</p>
@@ -75,12 +87,16 @@ const CustomModal = (props) => {
                     <p className={style.comment}>{item.comment}</p>
                   </div>
                 )}
+                </section>
+
               </div>
             </div>
-            <div>
+
+            <section>
               <CommentSection comment={comment} changeComment={changeComment} callback={addNewComment}
                               action={action}></CommentSection>
-            </div>
+            </section>
+
           </Box>
         </Modal>
       </div>

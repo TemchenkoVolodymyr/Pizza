@@ -4,46 +4,29 @@ import italianFried from '../../assets/Italian Fried Pasta.jpg'
 import bg from '../../assets/bg_4.jpg'
 import bg2 from '../../assets/image_1 1.png'
 import bg3 from '../../assets/Books and Pizzas.jpg'
-import axios from "axios";
 import Blog from "./Blog/Blog";
 import {useDispatch, useSelector} from "react-redux";
 import {blogDataArabicAC, blogDataBooksAC, blogDataItalianAC} from "../../Redux/BlogSection/blogSectionAC";
+import {blogRequest} from "../../ApiRequest/ApiRequest";
 
 const BlogSection = () => {
 
   const [modal, setModal] = useState(false)
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    getBlogComment("italianMeet", blogDataItalianAC)
-    getBlogComment("arabicMeet", blogDataArabicAC)
-    getBlogComment("booksPizzaMeet", blogDataBooksAC)
-  }, [])
-
-
   const dataBlogComments = useSelector((state) => state.blogData)
-
   const arabicMeetData = dataBlogComments.arabicMeet
   const italianMeet = dataBlogComments.italianFriedMeet
   const booksPizzaMeetData = dataBlogComments.booksPizzaMeet
 
+  useEffect(() => {
 
-   const getBlogComment = (value, actionCreator) => {
+    dispatch(blogRequest.getComment("italianMeet", blogDataItalianAC))
+    dispatch(blogRequest.getComment("arabicMeet", blogDataArabicAC))
+    dispatch(blogRequest.getComment("booksPizzaMeet", blogDataBooksAC))
 
-    return axios.get(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/${value}`).then(res => dispatch(actionCreator(res.data.data.result)))
-  }
-   const addCommentBlog = (value, comment, action) => {
-    axios.post(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/${value}`, {
+  }, [])
 
-      author: "Quest",
-      comment: comment,
-      date: new Date().toLocaleDateString()
-    }).then(res => {
-      if (res.status === 200) {
-        getBlogComment(value, action)
-      }
-    })
-  }
   const handleClose = () => {
     setModal(false)
   };
@@ -57,7 +40,7 @@ const BlogSection = () => {
 
   return (
     <>
-      <div className={style.container} style={{backgroundImage: `url(${bg})`}}>
+      <div style={{backgroundImage: `url(${bg})`}}>
         <div className={style.header}>
           <h1>RECENT FROM BLOG</h1>
           <p>{description}</p>
@@ -71,29 +54,25 @@ const BlogSection = () => {
                 date={'10 Sept , 2020'}
                 countOfComment={dataBlogComments ? italianMeet.length : 0}
                 title="Italian Fried Meet" description={descriptionFirstBlog}
-                callback={getBlogComment}
                 valueRequest={"italianMeet"}
                 modal={modal}
                 data={italianMeet}
                 handleClose={handleClose}
-                addComment={addCommentBlog}
                 action={blogDataItalianAC}
 
           ></Blog>
           <Blog openComment={setModal} image={bg2} date={'12 July , 2022'}
                 countOfComment={dataBlogComments ? arabicMeetData.length : 0} title="Arabic Meet" description={descriptionSecondBlog}
-                callback={getBlogComment} valueRequest={"arabicMeet"}
+                 valueRequest={"arabicMeet"}
                 data={arabicMeetData}
                 handleClose={handleClose}
-                addComment={addCommentBlog}
                 action={blogDataArabicAC}
           ></Blog>
           <Blog  openComment={setModal} image={bg3} date={'1 Sept , 2023'}
                 countOfComment={dataBlogComments ? booksPizzaMeetData.length : 0} title="Books Pizza Meet"
-                description={descriptionThirdBlog} callback={getBlogComment} valueRequest={"booksPizzaMeet"}
+                description={descriptionThirdBlog} valueRequest={"booksPizzaMeet"}
                 data={booksPizzaMeetData}
                 handleClose={handleClose}
-                addComment={addCommentBlog}
                 action={blogDataBooksAC}
           ></Blog>
         </div>
