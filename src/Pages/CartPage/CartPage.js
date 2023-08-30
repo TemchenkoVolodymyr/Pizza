@@ -18,17 +18,16 @@ const CartPage = () => {
   const dataOrderCart = useSelector((state) => state.cart.orders)
   const increaseTotalSum = (sum) => {
 
-    setTotalSum(totalSum => totalSum =sum)
+    setTotalSum(totalSum => totalSum = sum)
   }
 
   useEffect(() => {
     const localDataOrder = localStorage.getItem('order')
     dispatch(cartDataOrderAC(JSON.parse(localDataOrder)))
-
-
-
   },[])
+
   let quantities = 0
+
   useEffect(() => {
     let sum = 0;
     dataOrderCart?.map(item => {

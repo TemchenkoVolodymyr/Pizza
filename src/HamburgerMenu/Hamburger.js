@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import style from './Hamburger.module.scss'
-import {Link} from "react-scroll";
 import Items from "./HamburgerItems/Items";
 
 const Hamburger = () => {
@@ -17,9 +16,10 @@ const Hamburger = () => {
  }
 
   return (
-    <div className={style.container}>
+    <div>
       <div className={`${style.headerBurger} ${isActive ? style.active : null}`} onClick={changeActive}>
         <span></span>
+        <nav>
         <div className={style.menu}>
           <ul className={style.items}>
             <Items callback={closeModalAfterClickItem} position={'home'} title={'Home'}></Items>
@@ -31,6 +31,7 @@ const Hamburger = () => {
 
           </ul>
         </div>
+        </nav>
       </div>
     </div>
   );

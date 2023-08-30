@@ -2,22 +2,24 @@ import React, {useEffect, useState} from 'react';
 import style from './ItemCart.module.scss'
 import CustomSelect from "./CustomSelect/CustomSelect";
 import {useDispatch} from "react-redux";
-import {cartDataOrderAC, changeQuantityCartAC} from "../../../Redux/Cart/cartAC";
+import { changeQuantityCartAC } from "../../../Redux/Cart/cartAC";
 import {RiDeleteBin7Line} from "react-icons/ri";
+import { deleteCartItemThunkCreator } from "../../../ApiRequest/ApiRequest";
 
 const ItemCart = (props) => {
 
   const [currentNumOfItems,setCurrentNumOfItems] = useState(1)
-  const dispatch = useDispatch()
-
   const [currentItemTotal,setCurrentItemTotal] = useState(0)
+
   const {data , increaseTotal,totalSum,setPrice,setQuantity} = props
+
+  const dispatch = useDispatch()
   const changeCountOfItem = (currentCount) => {
     setCurrentNumOfItems(currentCount)
   }
   const localDataOrder = JSON.parse(localStorage.getItem('order')) || []
 
-  useEffect(() =>{
+  useEffect(() => {
     increaseTotal(totalSum + currentItemTotal)
   },[currentItemTotal])
 
@@ -27,11 +29,7 @@ const ItemCart = (props) => {
   }
 
   const deletePizzaCart = (itemId) => {
-   const newArrayOrder = localDataOrder.filter((item) => item.id !== itemId)
-    localStorage.setItem('order',JSON.stringify(newArrayOrder))
-    dispatch(cartDataOrderAC(newArrayOrder))
-    setPrice(0)
-    setQuantity(0)
+    dispatch(deleteCartItemThunkCreator(itemId,localDataOrder,setPrice,setQuantity))
   }
 
   return (
@@ -39,7 +37,7 @@ const ItemCart = (props) => {
       <div className={style.wrapper}>
         <div className={style.wrapperProduct}>
           <img alt='image' src={`pizza/${data?.image}`}/>
-          <div className={style.wrapperDesc}>
+          <div>
             <p className={style.name}>{data?.name}</p>
             <p className={style.ingredients}>Ingredients : {data?.ingredients}</p>
             <p className={style.size}>Size : {data?.size}</p>

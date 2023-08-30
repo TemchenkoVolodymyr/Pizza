@@ -1,8 +1,14 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .items{
   display: flex;
   //background-color: black;
   li{
     padding:10px;
+    border-radius: 15px;
     font-size: 30px;
     list-style: none;
     color:#fdfdfd;

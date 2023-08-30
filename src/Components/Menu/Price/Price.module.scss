@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 100px auto;
+  margin: 10px auto;
   justify-content: center;
   max-width: 1200px;
 
@@ -73,10 +73,14 @@ p{
   }
 }
 .wrapperPricePaginator{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .items{
     display: flex;
     li{
       padding:10px;
+      border-radius: 15px;
       font-size: 30px;
       list-style: none;
       color:#fdfdfd;

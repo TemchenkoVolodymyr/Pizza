@@ -14,27 +14,29 @@
     align-items: center;
     justify-content: center;
 
-    ul {
-      display: flex;
-      color: #ffffff;
-      font-weight: bold;
+    nav {
+      ul {
+        display: flex;
+        color: #ffffff;
+        font-weight: bold;
 
-      li {
-        list-style: none;
-        padding: 5px;
-        margin: 0 25px;
+        li {
+          list-style: none;
+          padding: 5px;
+          margin: 0 25px;
 
-        &:hover {
-          cursor: pointer;
-          color: #ef0000;
+          &:hover {
+            cursor: pointer;
+            color: #ef0000;
 
+          }
+        ;
         }
-      ;
       }
     }
-
   }
-  .hamburger{
+
+  .hamburger {
     display: none;
     margin-right: 500px;
   }
@@ -45,67 +47,71 @@
 
   @media (min-width: 1024px) and (max-width: 1380px) {
     align-items: center;
-    padding:  5px 10px;
-    .wrapperList{
+    padding: 5px 10px;
+    .wrapperList {
       display: none;
     }
-    .hamburger{
+    .hamburger {
       display: block;
 
     }
-    img{
+    img {
       max-width: 80px;
     }
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     padding: 0 15px;
     align-items: center;
-    .wrapperList{
+    .wrapperList {
       display: none;
     }
-    .hamburger{
+    .hamburger {
       display: block;
-      .headerBurger{
+
+      .headerBurger {
         width: 30px;
         height: 20px;
-        span{
-          top:10px;
+
+        span {
+          top: 10px;
         }
       }
 
     }
-    .logo{
+    .logo {
       display: none;
     }
-    .cart{
-      img{
+    .cart {
+      img {
         max-width: 50px;
       }
     }
   }
   @media (max-width: 767px) {
-    .wrapperList{
+    .wrapperList {
       display: none;
     }
     .hamburger {
       display: block;
       margin-right: 0;
     }
-    .headerBurger{
+    .headerBurger {
       width: 20px;
       height: 15px;
-      span{
-        top:10px;
+
+      span {
+        top: 10px;
       }
     }
-    .logo{
+    .logo {
       display: none;
     }
-    .cart{
-      img{
+    .cart {
+      img {
         max-width: 30px;
       }
-      p{
+
+      p {
         font-size: 10px;
       }
     }

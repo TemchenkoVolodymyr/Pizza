@@ -22,7 +22,7 @@ const Pagination = (props) => {
   }
   return (
     <>
-      <div>
+      <div className={style.container}>
         <ul className={style.items}>
           {pageNumbers.map(num => <li className={currentPage === num ? style.active : null}
                                       onClick={() => changeActiveNum(num)} key={num}>{num}</li>)}

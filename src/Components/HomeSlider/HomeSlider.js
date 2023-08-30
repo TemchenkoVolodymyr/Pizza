@@ -1,6 +1,6 @@
 import React from "react";
 import style from './HomeSlider.module.scss'
-import Slide from "./Slide";
+import Slide from "./Slide/Slide";
 import sliderOne from '../../assets/firstHomeItemSlider.png'
 import sliderTwo from '../../assets/secondHomeItemSlider.png'
 import sliderThree from '../../assets/thirdHomeItemSlider.png'

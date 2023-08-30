@@ -2,9 +2,8 @@ import React, {useState} from "react";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import CustomInput from "./CustomInput/CustomInput";
-import axios from "axios";
 import {useDispatch} from "react-redux";
-import {getPizzas} from "../Pages/HomePage/HomePage";
+import { createPizzaItem} from "../ApiRequest/ApiRequest";
 
 
 const styleModal = {
@@ -39,18 +38,7 @@ const ModalAP = (props) => {
   const createNewPizza = (e) => {
     e.preventDefault()
 
-    axios.post(`https://delicious-pizza-50bbb34e6fdd.herokuapp.com/api/v1/pizza`, {
-      name,
-      image,
-      description,
-      shortDescription,
-      price
-    }).then(res => {
-      if (res.status === 200) {
-        getPizzas(dispatch)
-      }
-    })
-
+    dispatch(createPizzaItem(name,image,description,shortDescription,price))
   }
   return (
     <>
